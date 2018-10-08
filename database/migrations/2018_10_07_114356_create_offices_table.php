@@ -15,6 +15,13 @@ class CreateOfficesTable extends Migration
     {
         Schema::create('offices', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('office_type');
+            $table->string('name');
+            $table->json('meta');
+            // {
+            //     state: lagos,
+            //     local-government: agege,
+            // } don't know is this is necessary but will enable use to search by state or local-goverment in case of HOR, else this might be null or meta concerning te office type
             $table->timestamps();
         });
     }
