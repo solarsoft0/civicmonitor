@@ -1,1 +1,103 @@
-{"variables":[],"info":{"name":"","_postman_id":"34328f08-0c1f-49da-8bdb-f0430dbced31","description":"","schema":"https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"},"item":[{"name":"User\n\nUser Resource Login, Register, Details etc","description":"","item":[{"name":"Login endpoint","request":{"url":"http:\/\/localhost\/api\/v1\/login","method":"POST","body":{"mode":"formdata","formdata":[{"key":"email","value":"harmon85@example.com","type":"text","enabled":true},{"key":"password","value":"dolorum","type":"text","enabled":true}]},"description":"","response":[]}},{"name":"Register endpoint","request":{"url":"http:\/\/localhost\/api\/v1\/register","method":"POST","body":{"mode":"formdata","formdata":[{"key":"name","value":"dolor","type":"text","enabled":true},{"key":"email","value":"mwilkinson@example.com","type":"text","enabled":true},{"key":"password","value":"dolor","type":"text","enabled":true},{"key":"c_password","value":"dolor","type":"text","enabled":true},{"key":"username","value":"dolor","type":"text","enabled":true},{"key":"phone_number","value":"dolor","type":"text","enabled":true}]},"description":"","response":[]}},{"name":"Details endpoint","request":{"url":"http:\/\/localhost\/api\/v1\/details","method":"POST","body":{"mode":"formdata","formdata":[]},"description":"","response":[]}}]}]}
+{
+    "variables": [],
+    "info": {
+        "name": "",
+        "_postman_id": "34328f08-0c1f-49da-8bdb-f0430dbced31",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "User\n\nUser Resource Login, Register, Details etc",
+            "description": "",
+            "item": [
+                {
+                    "name": "Login endpoint",
+                    "request": {
+                        "url": "{{url}}/api/v1/login",
+                        "method": "POST",
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "harmon85@example.com",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "dolorum",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Register endpoint",
+                    "request": {
+                        "url": "{{url}}/api/v1/register",
+                        "method": "POST",
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "dolor",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "mwilkinson@example.com",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "dolor",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "c_password",
+                                    "value": "dolor",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "username",
+                                    "value": "dolor",
+                                    "type": "text",
+                                    "enabled": true
+                                },
+                                {
+                                    "key": "phone_number",
+                                    "value": "dolor",
+                                    "type": "text",
+                                    "enabled": true
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Details endpoint",
+                    "request": {
+                        "url": "{{url}}/api/v1/details",
+                        "method": "POST",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 <?php
 
-if (getenv("CLEARDB_DATABASE_URL")){
-    $dbUrl = parse_url(env("CLEARDB_DATABASE_URL"));
+if (getenv("DATABASE_URL")){
+    $dbUrl = parse_url(env("DATABASE_URL"));
 } else{
 
     $dbUrl = '';
@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
     /*
     |--------------------------------------------------------------------------
     | Database Connections
@@ -48,7 +48,7 @@ return [
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
+            'driver' => 'pgsql',
             'host' => isset($dbUrl["host"]) ? $dbUrl["host"] : env("DB_HOST"),
             'port' => isset($dbUrl["port"]) ? $dbUrl["port"] : env("DB_PORT"),
             'database' => isset($dbUrl["path"]) ? ltrim($dbUrl["path"], '/') : env("DB_DATABASE"),

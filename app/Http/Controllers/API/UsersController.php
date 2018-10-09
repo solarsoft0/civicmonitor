@@ -41,12 +41,15 @@ class UsersController extends Controller
     public function register(StoreUserRequest $request)
     {
 
-        $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
-        $user = User::create($input);
-        $success['token'] = $user->createToken('MyApp')->accessToken;
-        $success['name'] = $user->name;
-        return response()->json(['success' => $success], $this->successStatus);
+       $input = $request->all();
+$input['password'] = bcrypt($input['password']);
+$user = User::create($input);
+$success['token'] = $user->createToken('MyApp')->accessToken;
+$success['first_name'] = $user->first_name;
+$success['first_name'] = $user->first_name;
+$success['last_name'] = $user->last_name;
+return response()->json(['success' => $success], $this->successStatus);
+
     }
 /**
  * Details endpoint
