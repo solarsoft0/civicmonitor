@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateIssuesTable extends Migration
 {
@@ -15,14 +15,15 @@ class CreateIssuesTable extends Migration
     {
         Schema::create('issues', function (Blueprint $table) {
             $table->increments('id');
-            $table->sting('title');
-            $table->body('description');
+            $table->string('title');
+            $table->text('description');
             $table->UnsignedInteger('election_id');
             $table->timestamps();
             $table->foreign('election_id')
-            ->reference('elections')
-            ->on('id');
+                ->references('id')
+                ->on('elections');
         });
+
     }
 
     /**

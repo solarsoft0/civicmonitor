@@ -2,9 +2,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\LoginUserRequest;
-
+use App\Http\Requests\StoreUserRequest;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,21 +33,20 @@ class UsersController extends Controller
         }
     }
 /**
- * Register endpoint 
+ * Register endpoint
  *
  * @return \Illuminate\Http\Response
  */
     public function register(StoreUserRequest $request)
     {
 
-       $input = $request->all();
-$input['password'] = bcrypt($input['password']);
-$user = User::create($input);
-$success['token'] = $user->createToken('MyApp')->accessToken;
-$success['first_name'] = $user->first_name;
-$success['first_name'] = $user->first_name;
-$success['last_name'] = $user->last_name;
-return response()->json(['success' => $success], $this->successStatus);
+        $input = $request->all();
+        $input['password'] = bcrypt($input['password']);
+        $user = User::create($input);
+        $success['token'] = $user->createToken('MyApp')->accessToken;
+        $success['first_name'] = $user->first_name;
+        $success['last_name'] = $user->last_name;
+        return response()->json(['success' => $success], $this->successStatus);
 
     }
 /**

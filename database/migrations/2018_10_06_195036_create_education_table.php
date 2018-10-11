@@ -20,8 +20,8 @@ class CreateEducationTable extends Migration
             $table->text('notes');
             $table->timestamps();
             $table->foreign('candidate_id')
-                ->reference('cndidates')
-                ->on('id');
+                ->references('id')
+                ->on('candidates');
         });
     }
 

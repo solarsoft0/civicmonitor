@@ -16,7 +16,7 @@ class CreateOfficeTypesTable extends Migration
         Schema::create('office_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name'); //House of Representative, Senate , Governorship, Presidential
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 
