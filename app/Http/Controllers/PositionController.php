@@ -7,6 +7,12 @@ use App\Http\Requests\UpdatePositionRequest;
 use App\Position;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Position
+ *
+ * Position CRUD Resource and ...
+ */
+
 class PositionController extends Controller
 {
     /**
@@ -16,7 +22,7 @@ class PositionController extends Controller
      */
     public function index()
     {
-        $positions = Position::all();
+        $positions = Position::paginate(15);
 
         return response($positions);
 
@@ -57,7 +63,8 @@ class PositionController extends Controller
      */
     public function show(Position $position)
     {
-        //
+        return response($position);
+
     }
 
     /**

@@ -7,6 +7,12 @@ use App\Http\Requests\UpdateIssueRequest;
 use App\Issue;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Issue
+ *
+ * Issue CRUD Resource and ...
+ */
+
 class IssueController extends Controller
 {
     /**
@@ -45,7 +51,7 @@ class IssueController extends Controller
         if (request()->wantsJson()) {
             return response($issue, 201);
         }
-
+        
     }
 
     /**
@@ -56,7 +62,8 @@ class IssueController extends Controller
      */
     public function show(Issue $issue)
     {
-        //
+                return response($issue);
+
     }
 
     /**

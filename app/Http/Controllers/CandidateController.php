@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Candidate;
+use App\Http\Requests\CandidateIssuePositionRequest;
+use App\Http\Requests\CandidatePoliticalPartiesRequest;
 use App\Http\Requests\StoreCandidateRequest;
 use App\Http\Requests\UpdateCandidateRequest;
 use App\Http\Resources\CandidateCollection;
+use App\Issue;
 use Illuminate\Http\Request;
+
+/**
+ * @resource Candidate
+ *
+ * Candidate CRUD Resource and ...
+ */
 
 class CandidateController extends Controller
 {
@@ -17,7 +26,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        $candidates = Candidate::all()->paginate(15);
+        $candidates = Candidate::paginate(15);
 
         return new CandidateCollection($candidates);
 
@@ -58,7 +67,8 @@ class CandidateController extends Controller
      */
     public function show(Candidate $candidate)
     {
-        //
+        return response($candidate);
+
     }
 
     /**
@@ -105,6 +115,40 @@ class CandidateController extends Controller
         }
 
         return redirect()->back();
+
+    }
+
+    /**
+     * Get a Candidate Issue Positions.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
+    {
+        $candidateIssuePositions = $candidate->load('issuePositions.issue')->get();
+
+        if (request()->wantsJson()) {
+            return response($candidateIssuePositions, 201);
+        }
+
+    }
+
+    /**
+     * Get a Candidate Political Parties.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function candidatePoliticalParties(Candidate $candidate, CandidatePoliticalPartiesRequest $request)
+    {
+        $candidateIssuePositions = $candidate->load('politicalParties')->get();
+
+        if (request()->wantsJson()) {
+            return response($candidateIssuePositions, 201);
+        }
 
     }
 }

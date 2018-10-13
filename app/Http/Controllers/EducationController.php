@@ -7,6 +7,12 @@ use App\Http\Requests\StoreEducationRequest;
 use App\Http\Requests\UpdateEducationRequest;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Education
+ *
+ * Education CRUD Resource and ...
+ */
+
 class EducationController extends Controller
 {
     /**
@@ -57,7 +63,8 @@ class EducationController extends Controller
      */
     public function show(Education $education)
     {
-        //
+        return response($education);
+
     }
 
     /**

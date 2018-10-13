@@ -23,10 +23,10 @@ class CreateIssuePositionsTable extends Migration
             $table->json('sources')->nullable();
             $table->timestamps();
             $table->foreign('issue_id')
-                ->references('id')  
+                ->references('id')
                 ->on('issues');
             $table->foreign('candidate_id')
-                ->references('id')  
+                ->references('id')
                 ->on('candidates');
         });
     }

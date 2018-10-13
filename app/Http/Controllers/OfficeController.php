@@ -7,6 +7,11 @@ use App\Http\Requests\UpdateOfficeRequest;
 use App\Office;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Office
+ *
+ * Office CRUD Resource and ...
+ */
 class OfficeController extends Controller
 {
     /**
@@ -16,7 +21,7 @@ class OfficeController extends Controller
      */
     public function index()
     {
-        $offices = Office::all()->paginate(15);
+        $offices = Office::paginate(15);
 
         return response($offices);
 
@@ -57,6 +62,9 @@ class OfficeController extends Controller
      */
     public function show(Office $office)
     {
+
+        return response($office);
+
         //
     }
 

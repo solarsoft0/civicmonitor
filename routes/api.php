@@ -23,17 +23,19 @@ Route::group(['prefix' => 'v1'], function () {
 });
 
 Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
+    Route::get('candidates/{candidate}/issue-positions', 'CandidateController@candidateIssuePositions');
+    Route::get('candidates/{candidate}/candidate-political-parties', 'CandidateController@candidatePoliticalParties');
     Route::post('details', 'API\UsersController@details');
     Route::resource('candidates', 'CandidateController');
     Route::resource('elections', 'ElectionController');
     Route::resource('election-types', 'ElectionTypeController');
-    Route::resource('educations', 'EducationTypeController');
+    Route::resource('educations', 'EducationController');
     Route::resource('issues', 'IssueController');
     Route::resource('issuePositions', 'IssuePositionController');
     Route::resource('memberships', 'MembershipController');
     Route::resource('offices', 'OfficeController');
     Route::resource('office-types', 'OfficeTypeController');
-    Route::resource('politicians', 'PoliticainController');
+    Route::resource('politicians', 'PoliticianController');
     Route::resource('positions', 'PositionController');
 
 });

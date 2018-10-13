@@ -8,6 +8,13 @@ use App\Http\Requests\StoreElectionTypeRequest;
 use App\Http\Requests\UpdateElectionTypeRequest;
 
 
+/**
+ * @resource ElectionType
+ *
+ * ElectionType CRUD Resource and ...
+ */
+
+
 class ElectionTypeController extends Controller
 {
     /**
@@ -17,7 +24,8 @@ class ElectionTypeController extends Controller
      */
     public function index()
     {
-        $electionTypes = ElectionType::all();
+        $electionTypes = ElectionType::paginate(15);
+
 
         return response($electionTypes);
     }
@@ -55,7 +63,8 @@ class ElectionTypeController extends Controller
      */
     public function show(ElectionType $electionType)
     {
-        //
+        return response($electionType);
+
     }
 
     /**

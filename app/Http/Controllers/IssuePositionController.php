@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\IssuePosition;
 use Illuminate\Http\Request;
 
+/**
+ * @resource IssuePosition
+ *
+ * IssuePosition CRUD Resource and ...
+ */
+
 class IssuePositionController extends Controller
 {
     /**
@@ -15,7 +21,7 @@ class IssuePositionController extends Controller
     public function index()
     {
 
-        $issuePositions = Issue::all();
+        $issuePositions = IssuePosition::paginate(15);
 
         return response($issuePositions);
 
@@ -39,7 +45,7 @@ class IssuePositionController extends Controller
      */
     public function store(Request $request)
     {
-        $issuePosition = Issue::create($request->all());
+        $issuePosition = IssuePosition::create($request->all());
 
         if (request()->wantsJson()) {
             return response($issuePosition, 201);
@@ -55,7 +61,8 @@ class IssuePositionController extends Controller
      */
     public function show(IssuePosition $issuePosition)
     {
-        //
+        return response($issuePosition);
+
     }
 
     /**

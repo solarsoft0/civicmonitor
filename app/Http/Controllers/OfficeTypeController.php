@@ -7,6 +7,12 @@ use App\Http\Requests\UpdateOfficeTypeRequest;
 use App\OfficeType;
 use Illuminate\Http\Request;
 
+/**
+ * @resource OfficeType
+ *
+ * OfficeType CRUD Resource and ...
+ */
+
 class OfficeTypeController extends Controller
 {
     /**
@@ -17,7 +23,7 @@ class OfficeTypeController extends Controller
     public function index()
     {
 
-        $offices = Office::all();
+        $offices = OfficeType::paginate(15);
 
         return response($offices);
 
@@ -41,7 +47,7 @@ class OfficeTypeController extends Controller
      */
     public function store(StoreOfficeTypeRequest $request)
     {
-        $officeType = Office::create($request->all());
+        $officeType = OfficeType::create($request->all());
 
         if (request()->wantsJson()) {
             return response($officeType, 201);
@@ -57,7 +63,7 @@ class OfficeTypeController extends Controller
      */
     public function show(OfficeType $officeType)
     {
-        //
+        return response($officeType);
     }
 
     /**

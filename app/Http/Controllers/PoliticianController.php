@@ -7,6 +7,12 @@ use App\Http\Requests\UpdatePoliticianRequest;
 use App\Politician;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Politician
+ *
+ * Politician CRUD Resource and ...
+ */
+
 class PoliticianController extends Controller
 {
     /**
@@ -16,7 +22,7 @@ class PoliticianController extends Controller
      */
     public function index()
     {
-        $politicians = Politician::all();
+        $politicians = Politician::paginate(15);
 
         return response($politicians);
 
@@ -56,7 +62,8 @@ class PoliticianController extends Controller
      */
     public function show(Politician $politician)
     {
-        //
+        return response($politician);
+
     }
 
     /**

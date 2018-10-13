@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 // use App\Http\Resources
 
+/**
+ * @resource Election
+ *
+ * Election CRUD Resource and ...
+ */
+
 class ElectionController extends Controller
 {
     /**
@@ -18,7 +24,7 @@ class ElectionController extends Controller
      */
     public function index()
     {
-        $elections = Election::all()->paginate(15);
+        $elections = Election::paginate(15);
 
         return response($elections);
 
@@ -58,7 +64,8 @@ class ElectionController extends Controller
      */
     public function show(Election $election)
     {
-        //
+        return response($election);
+
     }
 
     /**

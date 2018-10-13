@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Membership;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Membership
+ *
+ * Membership CRUD Resource and ...
+ */
+
 class MembershipController extends Controller
 {
     /**
@@ -14,7 +20,7 @@ class MembershipController extends Controller
      */
     public function index()
     {
-        $memberships = Issue::all()->paginate(15);
+        $memberships = Membership::paginate(15);
 
         return response($memberships);
 
@@ -38,7 +44,7 @@ class MembershipController extends Controller
      */
     public function store(Request $request)
     {
-        $membership = Issue::create($request->all());
+        $membership = Membership::create($request->all());
 
         if (request()->wantsJson()) {
             return response($membership, 201);
@@ -54,6 +60,8 @@ class MembershipController extends Controller
      */
     public function show(Membership $membership)
     {
+                return response($membership);
+
         //
     }
 
