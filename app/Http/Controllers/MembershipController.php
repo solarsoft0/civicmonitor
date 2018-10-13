@@ -14,7 +14,7 @@ class MembershipController extends Controller
      */
     public function index()
     {
-        $memberships = Issue::all();
+        $memberships = Issue::all()->paginate(15);
 
         return response($memberships);
 

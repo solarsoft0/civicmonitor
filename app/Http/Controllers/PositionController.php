@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePositionRequest;
+use App\Http\Requests\UpdatePositionRequest;
 use App\Position;
 use Illuminate\Http\Request;
 
@@ -36,7 +38,7 @@ class PositionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePositionRequest $request)
     {
         $positions = Position::create($request->all());
 
@@ -76,7 +78,7 @@ class PositionController extends Controller
      * @param  \App\Position  $position
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Position $position)
+    public function update(UpdatePositionRequest $request, Position $position)
     {
         $positions->update($request->all());
         return $positions;

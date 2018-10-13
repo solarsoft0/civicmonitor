@@ -18,7 +18,7 @@ class ElectionController extends Controller
      */
     public function index()
     {
-        $elections = Election::all();
+        $elections = Election::all()->paginate(15);
 
         return response($elections);
 

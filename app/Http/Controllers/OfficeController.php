@@ -16,7 +16,7 @@ class OfficeController extends Controller
      */
     public function index()
     {
-        $offices = Office::all();
+        $offices = Office::all()->paginate(15);
 
         return response($offices);
 

@@ -17,7 +17,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        $candidates = Candidate::all();
+        $candidates = Candidate::all()->paginate(15);
 
         return new CandidateCollection($candidates);
 

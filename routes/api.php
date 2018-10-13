@@ -24,4 +24,16 @@ Route::group(['prefix' => 'v1'], function () {
 
 Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
     Route::post('details', 'API\UsersController@details');
+    Route::resource('candidates', 'CandidateController');
+    Route::resource('elections', 'ElectionController');
+    Route::resource('election-types', 'ElectionTypeController');
+    Route::resource('educations', 'EducationTypeController');
+    Route::resource('issues', 'IssueController');
+    Route::resource('issuePositions', 'IssuePositionController');
+    Route::resource('memberships', 'MembershipController');
+    Route::resource('offices', 'OfficeController');
+    Route::resource('office-types', 'OfficeTypeController');
+    Route::resource('politicians', 'PoliticainController');
+    Route::resource('positions', 'PositionController');
+
 });
