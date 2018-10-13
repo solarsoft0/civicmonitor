@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreOfficeTypeRequest;
+use App\Http\Requests\UpdateOfficeTypeRequest;
 use App\OfficeType;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,11 @@ class OfficeTypeController extends Controller
      */
     public function index()
     {
-        //
+
+        $offices = Office::all();
+
+        return response($offices);
+
     }
 
     /**
@@ -33,8 +39,13 @@ class OfficeTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreOfficeTypeRequest $request)
     {
+        $officeType = Office::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($officeType, 201);
+        }
         //
     }
 
@@ -67,8 +78,10 @@ class OfficeTypeController extends Controller
      * @param  \App\OfficeType  $officeType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OfficeType $officeType)
+    public function update(UpdateOfficeTypeRequest $request, OfficeType $officeType)
     {
+        $officeType->update($request->all());
+        return $officeType;
         //
     }
 
@@ -80,6 +93,13 @@ class OfficeTypeController extends Controller
      */
     public function destroy(OfficeType $officeType)
     {
+        $officeType->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
         //
     }
 }

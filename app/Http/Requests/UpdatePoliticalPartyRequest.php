@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateIssuePositionRequest extends FormRequest
+class UpdatePoliticalPartyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class UpdateIssuePositionRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,14 +24,11 @@ class UpdateIssuePositionRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required|integer|exits:issue_positions',
-            'issue_id' => 'integer|exits:issues',
-            'candidate_id' => 'integer|exits:candidates',
-            'title' => 'string|max:225',
-            'body' => "text",
-            'audio' => 'mimes:mp3',
-            'sources' => "json",
-
+            'id' => 'required|integer|exists:politcal_parties',
+            'name' => 'string|max:225',
+            'description' => 'string',
+            'acronym' => 'string|max:10',
+            'founded_date' => 'date',
         ];
     }
 }

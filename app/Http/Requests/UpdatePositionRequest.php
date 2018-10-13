@@ -24,7 +24,11 @@ class UpdatePositionRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'id' => 'integer|exits:postions', //Chairman of APC
+            'role' => 'role', //Chairman of APC
+            'political_party_id' => 'required',
+            'position' => 'required', //chairman
+
         ];
     }
 }

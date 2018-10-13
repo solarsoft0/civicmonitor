@@ -16,4 +16,6 @@ class IssuePosition extends Model
         return $this->belongsTo(App\Candidate::class);
     }
 
+    
+
 }

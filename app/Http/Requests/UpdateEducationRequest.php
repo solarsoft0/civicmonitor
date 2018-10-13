@@ -13,7 +13,7 @@ class UpdateEducationRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class UpdateEducationRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+
+            'id' => 'required|integer|exist:education',
+            'candidate_id' => 'required|exist:candidates',
+            'levels' => 'json',
+            'notes' => 'string',
         ];
     }
 }

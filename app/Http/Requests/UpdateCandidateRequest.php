@@ -24,7 +24,7 @@ class UpdateCandidateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required',
+            'id' => 'required|integer|exits:candidates',
             'title' => 'string',
             'name' => '|string|max:255',
             'other_names' => 'json',

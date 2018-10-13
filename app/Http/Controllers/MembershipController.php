@@ -8,17 +8,20 @@ use Illuminate\Http\Request;
 class MembershipController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Membership resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $memberships = Issue::all();
+
+        return response($memberships);
+
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new Membership resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,18 +31,23 @@ class MembershipController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Membership resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $membership = Issue::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($membership, 201);
+        }
+
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Membership resource.
      *
      * @param  \App\Membership  $membership
      * @return \Illuminate\Http\Response
@@ -50,7 +58,7 @@ class MembershipController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Membership resource.
      *
      * @param  \App\Membership  $membership
      * @return \Illuminate\Http\Response
@@ -61,7 +69,7 @@ class MembershipController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Membership resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Membership  $membership
@@ -69,17 +77,25 @@ class MembershipController extends Controller
      */
     public function update(Request $request, Membership $membership)
     {
-        //
+        $membership->update($request->all());
+        return $membership;
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Membership resource from storage.
      *
      * @param  \App\Membership  $membership
      * @return \Illuminate\Http\Response
      */
     public function destroy(Membership $membership)
     {
-        //
+        $membership->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
+
     }
 }

@@ -14,7 +14,11 @@ class IssuePositionController extends Controller
      */
     public function index()
     {
-        //
+
+        $issuePositions = Issue::all();
+
+        return response($issuePositions);
+
     }
 
     /**
@@ -35,7 +39,12 @@ class IssuePositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $issuePosition = Issue::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($issuePosition, 201);
+        }
+
     }
 
     /**
@@ -69,6 +78,8 @@ class IssuePositionController extends Controller
      */
     public function update(Request $request, IssuePosition $issuePosition)
     {
+        $issuePosition->update($request->all());
+        return $issuePosition;
         //
     }
 
@@ -80,6 +91,13 @@ class IssuePositionController extends Controller
      */
     public function destroy(IssuePosition $issuePosition)
     {
-        //
+        $issuePosition->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
+
     }
 }

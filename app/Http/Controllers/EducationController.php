@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Education;
+use App\Http\Requests\StoreEducationRequest;
+use App\Http\Requests\UpdateEducationRequest;
 use Illuminate\Http\Request;
 
 class EducationController extends Controller
@@ -14,7 +16,10 @@ class EducationController extends Controller
      */
     public function index()
     {
-        //
+        $educations = Education::all();
+
+        return response($educations);
+
     }
 
     /**
@@ -33,9 +38,15 @@ class EducationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEducationRequest $request)
     {
-        //
+        $education = Education::create($request->all());
+
+// todo image
+        if (request()->wantsJson()) {
+            return response($education, 201);
+        }
+
     }
 
     /**
@@ -67,9 +78,15 @@ class EducationController extends Controller
      * @param  \App\Education  $education
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Education $education)
+    public function update(UpdateEducationRequest $request, Education $education)
     {
-        //
+        $education->update(request()->validate([
+            'name' => request('name'),
+            'description' => request('description'),
+        ]));
+
+        return $education;
+
     }
 
     /**
@@ -80,6 +97,13 @@ class EducationController extends Controller
      */
     public function destroy(Education $education)
     {
-        //
+        $education->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
+
     }
 }

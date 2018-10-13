@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreEducationLevelRequest extends FormRequest
+class UpdateOfficeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,7 @@ class StoreEducationLevelRequest extends FormRequest
     public function rules()
     {
         return [
-        'candidate_id' => 'required|exist:candidates',
-'levels' => 'json',
-'notes' =>'string'
-
+            //
         ];
     }
 }

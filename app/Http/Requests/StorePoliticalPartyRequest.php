@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateEducationLevelRequest extends FormRequest
+class StorePoliticalPartyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class UpdateEducationLevelRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return \Symfony\Component\HttpKernel\Tests\EventListener\FragmentListenerTest;
     }
 
     /**
@@ -24,10 +24,10 @@ class UpdateEducationLevelRequest extends FormRequest
     public function rules()
     {
         return [
-            
-        'candidate_id' => 'exist:candidates',
-'levels' => 'json',
-'notes' =>'string'
+            'name' => 'required|string|max:225',
+            'description' => 'required|string',
+            'acronym' => 'required|string|max:10',
+            'founded_date' => 'date',
         ];
     }
 }

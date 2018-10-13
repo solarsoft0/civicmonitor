@@ -24,7 +24,13 @@ class StoreIssuePositionRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'issue_id' => 'required|integer|exits:issues',
+            'candidate_id' => 'required|integer|exits:candidates',
+            'title' => 'required|string|max:225',
+            'body' => "text",
+            'audio' => 'mimes:mp3',
+            'sources' => "json",
+
         ];
     }
 }

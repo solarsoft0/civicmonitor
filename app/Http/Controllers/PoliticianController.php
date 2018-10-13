@@ -2,23 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePoliticianRequest;
+use App\Http\Requests\UpdatePoliticianRequest;
 use App\Politician;
 use Illuminate\Http\Request;
 
 class PoliticianController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Politician resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $politicians = Politician::all();
+
+        return response($politicians);
+
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new Politician resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,18 +33,23 @@ class PoliticianController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created Politician resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePoliticianRequest $request)
     {
+        $politician = Politician::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($politician, 201);
+        }
         //
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified Politician resource.
      *
      * @param  \App\Politician  $politician
      * @return \Illuminate\Http\Response
@@ -50,7 +60,7 @@ class PoliticianController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Politician resource.
      *
      * @param  \App\Politician  $politician
      * @return \Illuminate\Http\Response
@@ -61,25 +71,36 @@ class PoliticianController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Politician resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Politician  $politician
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Politician $politician)
+    public function update(UpdatePoliticianRequest $request, Politician $politician)
     {
+
+        $politician->update($request->all());
+        return $politician;
         //
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Politician resource from storage.
      *
      * @param  \App\Politician  $politician
      * @return \Illuminate\Http\Response
      */
     public function destroy(Politician $politician)
     {
-        //
+        $politician->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
+//
+
     }
 }

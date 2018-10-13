@@ -13,7 +13,7 @@ class StoreEducationRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,14 @@ class StoreEducationRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules() 
     {
         return [
-            //
-        ];
+    'candidate_id' => 'required|exist:candidates',
+    'levels' => 'json',
+    'notes' => 'string',
+
+];
+
     }
 }

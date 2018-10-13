@@ -13,7 +13,7 @@ class UpdateIssueRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class UpdateIssueRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'id' => 'required|integer',
+            'title' => 'string|max:225',
+            'description' => 'string',
+            'election_id' => 'required|exists:elections',
         ];
     }
 }

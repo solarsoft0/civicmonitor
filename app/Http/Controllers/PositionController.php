@@ -14,7 +14,10 @@ class PositionController extends Controller
      */
     public function index()
     {
-        //
+        $positions = Position::all();
+
+        return response($positions);
+
     }
 
     /**
@@ -35,7 +38,13 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $positions = Position::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($positions, 201);
+        }
+//
+
     }
 
     /**
@@ -69,6 +78,9 @@ class PositionController extends Controller
      */
     public function update(Request $request, Position $position)
     {
+        $positions->update($request->all());
+        return $positions;
+
         //
     }
 
@@ -80,6 +92,13 @@ class PositionController extends Controller
      */
     public function destroy(Position $position)
     {
+        $positions->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
         //
     }
 }

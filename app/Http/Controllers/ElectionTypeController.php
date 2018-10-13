@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\ElectionType;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreElectionTypeRequest;
+use App\Http\Requests\UpdateElectionTypeRequest;
+
 
 class ElectionTypeController extends Controller
 {
@@ -14,7 +17,9 @@ class ElectionTypeController extends Controller
      */
     public function index()
     {
-        //
+        $electionTypes = ElectionType::all();
+
+        return response($electionTypes);
     }
 
     /**
@@ -33,9 +38,13 @@ class ElectionTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreElectionTypeRequest $request)
     {
-        //
+        $election = ElectionType::create($request->all());
+
+        if (request()->wantsJson()) {
+            return response($election, 201);
+        }
     }
 
     /**
@@ -67,9 +76,12 @@ class ElectionTypeController extends Controller
      * @param  \App\ElectionType  $electionType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ElectionType $electionType)
+    public function update(UpdateElectionTypeRequest $request, ElectionType $electionType)
     {
-        //
+
+        $election->update($request->all());
+
+        return $election;
     }
 
     /**
@@ -80,6 +92,12 @@ class ElectionTypeController extends Controller
      */
     public function destroy(ElectionType $electionType)
     {
-        //
+        $electionType->delete();
+
+        if (request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect()->back();
     }
 }

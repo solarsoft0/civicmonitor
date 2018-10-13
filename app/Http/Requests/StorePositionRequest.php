@@ -24,7 +24,10 @@ class StorePositionRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'role' => 'role', //Chairman of APC
+            'political_party_id' => 'required',
+            'position' => 'required', //chairman
+
         ];
     }
 }
