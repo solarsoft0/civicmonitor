@@ -151,6 +151,8 @@ return [
          * Package Service Providers...
          */
 
+               Laravel\Passport\PassportServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
