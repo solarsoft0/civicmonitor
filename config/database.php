@@ -47,7 +47,7 @@ return [
             'prefix' => '',
         ],
 
-        'mysql' => [
+        'pgsql' => [
             'driver' => 'pgsql',
             'host' => isset($dbUrl["host"]) ? $dbUrl["host"] : env("DB_HOST"),
             'port' => isset($dbUrl["port"]) ? $dbUrl["port"] : env("DB_PORT"),
@@ -60,7 +60,7 @@ return [
             'strict' => true,
             'engine' => null,
 ],
-        'pgsql' => [
+        'mysql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
