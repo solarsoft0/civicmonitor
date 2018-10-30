@@ -65,9 +65,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "https://nova.laravel.com",
-            "username": "okanlawonemmanuel41@gmail.com",
-            "password": "hello"
+            "url": "https://nova.laravel.com"
         }
     ]
 }
