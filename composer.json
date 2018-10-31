@@ -14,7 +14,7 @@
         "laravel/passport": "^7.0",
         "laravel/tinker": "^1.0",
         "mpociot/laravel-apidoc-generator": "^2.1",
-        "laravel/nova": "~1.0"
+        "laravel/nova": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -64,8 +64,8 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
+            "type": "path",
+            "url": "./nova"
         }
     ]
 }
