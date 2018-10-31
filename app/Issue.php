@@ -9,11 +9,14 @@ class Issue extends Model
 
     public function positions()
     {
-        return $this->hasMany(App\IssuePosition::class);
+        return $this->hasMany(IssuePosition::class);
     }
 
     public function candidates()
     {
-        return $this->hasManyThrough(App\Candidate::class, App\IssuePosition::class);
+        return $this->hasManyThrough(Candidate::class, IssuePosition::class);
+    }
+    public function election() {
+        return $this->belongsTo(Election::class);
     }
 }

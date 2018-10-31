@@ -15,8 +15,8 @@ class CreateElectionsTable extends Migration
     {
         Schema::create('elections', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->year('year');
+        $table->string('name');
+        $table->year('year');
         });
     }
 

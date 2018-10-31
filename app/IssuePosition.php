@@ -9,11 +9,11 @@ class IssuePosition extends Model
 
     public function issue()
     {
-        return $this->belongTo(App\Issue::class);
+        return $this->belongsTo(Issue::class);
     }
 
     public function candidate () {
-        return $this->belongsTo(App\Candidate::class);
+        return $this->belongsTo(Candidate::class);
     }
 
     

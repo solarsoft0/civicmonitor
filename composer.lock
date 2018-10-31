@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c2f3ae6dccfbc180cc88ef847ba30f0",
+    "content-hash": "f0f380c4222f3d48287af59c9739fc16",
     "packages": [
+        {
+            "name": "64robots/nova-fields",
+            "version": "0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/64robots/nova-fields.git",
+                "reference": "9064d335fa92be716ed4a10bc96f391fbabe20af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/64robots/nova-fields/zipball/9064d335fa92be716ed4a10bc96f391fbabe20af",
+                "reference": "9064d335fa92be716ed4a10bc96f391fbabe20af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "R64\\NovaFields\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "R64\\NovaFields\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-10-30T07:40:33+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.2.3",
