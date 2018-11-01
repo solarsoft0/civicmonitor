@@ -15,13 +15,10 @@ class CreatePositionsTable extends Migration
     {
         Schema::create('positions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('role');
-            $table->UnsignedInteger('political_party_id');
             $table->string('position');
+            $table->text('role_description');
             $table->timestamps();
-            $table->foreign('political_party_id')
-                ->references('id')
-                ->on('political_parties');
+            
 
         });
     }

@@ -3,6 +3,8 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\TextArea;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -20,7 +22,7 @@ class Position extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'position';
 
     /**
      * The columns that should be searched.
@@ -39,8 +41,11 @@ class Position extends Resource
      */
     public function fields(Request $request)
     {
+           
         return [
             ID::make()->sortable(),
+            Text::make("Position")->sortable(),
+            TextArea::make("Role Description")->sortable(),
         ];
     }
 

@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Nova;
-
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Text;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-
+use R64\NovaFields\JSON;
 class Office extends Resource
 {
     /**
@@ -20,7 +21,7 @@ class Office extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -40,8 +41,13 @@ class Office extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
-        ];
+  BelongsTo::make("Office Type", "office_type")->sortable(),
+            Text::make("Name")->sortable(),
+            JSON::make('meta', [
+              Text::make('State'),
+              Text::make('Local Goverment'),
+              Text::make('Other Information'),
+          ]),        ];
     }
 
     /**

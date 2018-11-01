@@ -2,12 +2,23 @@
 
 namespace App\Nova;
 
+use Silvanite\NovaFieldCloudinary\Fields\CloudinaryImage;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\TextArea;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use R64\NovaFields\JSON;
 
 class Politician extends Resource
 {
+
+    public static $with = ['memberships'];
+
     /**
      * The model the resource corresponds to.
      *
@@ -20,7 +31,7 @@ class Politician extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -28,7 +39,7 @@ class Politician extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
 
     /**
@@ -37,11 +48,44 @@ class Politician extends Resource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
+
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
-        ];
+            ID::make()->sortable(), 
+            Text::make("Title"),
+            Text::make("Name"),
+            JSON::make('Other Names',[
+                    Text::make('Name'),
+                    Text::make('Start Date'),
+                    Text::make('End Date'),
+                    Text::make('Note'),
+                
+            ]),
+            Text::make("Email"),
+            Text::make("Gender"),
+            Date::make("Birth Date"),
+            Date::make("Death Date"),
+            CloudinaryImage::make("Image"),
+            CloudinaryImage::make("Cover Image"),
+            TextArea::make("Summary"),
+            Trix::make("Biography"),
+            Text::make("National Identity"),
+JSON::make('Contact Details', [
+                    TextArea::make('Contact Detail 1'),
+                    TextArea::make('Contact Detail 2'),
+            ]),
+        JSON::make('Links', [
+                    Text::make('Website')->help(
+    'seperate with comma "," '
+),
+                   Text::make('Social-Media')->help(
+    'seperate with comma "," '
+),
+               ]), 
+               HasMany::make('Memberships'),
+               HasMany::make('Candidates'),
+];
     }
 
     /**

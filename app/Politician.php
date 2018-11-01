@@ -6,14 +6,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Politician extends Model
 {
-  
+      protected $casts = [
+    'birth_date' => 'date',
+    'death_date' => 'date',
+];
+
+public function Memberships() {
+    return $this->hasMany(Membership::class);
+}
+
   public function candidates() {
-      $this->hasMany(App\Candidate::class);
+    return  $this->hasManyThrough(Candidate::class, Membership::class);
+    return  $this->hasMany(Candidate::class);
   } 
 
 
-  public function parties()  {
-      $this->hasManyThrough(App\PoliticalParty::class, App\Membership::class);
+  public function political_parties()  {
+    return  $this->hasManyThrough(PoliticalParty::class, Membership::class);
   }
 
   

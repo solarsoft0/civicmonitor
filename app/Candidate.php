@@ -14,9 +14,10 @@ class Candidate extends Model
         return $this->hasMany(IssuePosition::class);
     }
 
-    public function politicalParties()
+    public function political_parties()
     {
-        return $this->hasMany(Membership::class);
+            return  $this->hasManyThrough(PoliticalParty::class, Membership::class);
+
     }
 
     public function profile()

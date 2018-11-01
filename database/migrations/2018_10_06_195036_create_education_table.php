@@ -15,13 +15,13 @@ class CreateEducationTable extends Migration
     {
         Schema::create('education', function (Blueprint $table) {
             $table->increments('id');
-            $table->UnsignedInteger('candidate_id');
+            $table->UnsignedInteger('politician_id');
             $table->json('levels');
             $table->text('notes');
             $table->timestamps();
-            $table->foreign('candidate_id')
+            $table->foreign('politician_id')
                 ->references('id')
-                ->on('candidates');
+                ->on('politicians');
         });
     }
 

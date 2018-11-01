@@ -16,7 +16,7 @@ class CreateMembershipsTable extends Migration
         Schema::create('memberships', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->UnsignedInteger('candidate_id');
+            $table->UnsignedInteger('politician_id');
             $table->UnsignedInteger('political_party_id');
             $table->UnsignedInteger('position_id');
             $table->date('start_date')->nullable();
@@ -25,9 +25,9 @@ class CreateMembershipsTable extends Migration
             $table->foreign('political_party_id')
                 ->references('id')
                 ->on('political_parties');
-            $table->foreign('candidate_id')
+            $table->foreign('politician_id')
                 ->references('id')
-                ->on('candidates');
+                ->on('politicians');
             $table->foreign('position_id')
                 ->references('id')
                 ->on('positions');

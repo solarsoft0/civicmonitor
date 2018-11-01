@@ -6,14 +6,29 @@ use Illuminate\Database\Eloquent\Model;
 
 class Membership extends Model
 {
-    public function politicalParties()
+
+       protected $casts = [
+    'start_date' => 'date',
+    'end_date' => 'date',
+];
+
+    public function political_party()
     {
-        return $this->hasMany(App\PoliticalParty::class);
+        return $this->BelongsTo(PoliticalParty::class);
+    }
+    public function politician()
+    {
+        return $this->BelongsTo(Politician::class);
     }
 
-    public function positions()
+    public function candidates()    
     {
-        return $this->hasMany(App\Position::class);
+        return $this->hasOne(Candidate::class);
+    }
+
+    public function position()
+    {
+        return $this->BelongsTo(Position::class);
 
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Nova;
+use Silvanite\NovaFieldCloudinary\Fields\CloudinaryImage;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
@@ -23,7 +24,7 @@ class PoliticalParty extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -47,6 +48,7 @@ class PoliticalParty extends Resource
             Text::make("Name"),
             Textarea::make("Description"),
             Text::make("Acronym"),
+            CloudinaryImage::make("Logo"),
             Date::make("Founded Date"),
         ];
     }

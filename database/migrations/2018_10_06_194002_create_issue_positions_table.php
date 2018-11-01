@@ -20,6 +20,7 @@ class CreateIssuePositionsTable extends Migration
             $table->string('title')->nullable();
             $table->text('body');
             $table->string('audio')->nullable();
+            $table->string('infographic')->nullable();
             $table->json('sources')->nullable();
             $table->timestamps();
             $table->foreign('issue_id')

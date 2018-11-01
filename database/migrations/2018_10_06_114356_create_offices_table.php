@@ -15,7 +15,7 @@ class CreateOfficesTable extends Migration
     {
         Schema::create('offices', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('office_type');
+            $table->unsignedInteger('office_type_id');
             $table->string('name');
             $table->json('meta');
             // {

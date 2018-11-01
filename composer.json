@@ -15,7 +15,9 @@
         "laravel/nova": "*",
         "laravel/passport": "^7.0",
         "laravel/tinker": "^1.0",
-        "mpociot/laravel-apidoc-generator": "^2.1"
+        "mpociot/laravel-apidoc-generator": "^2.1",
+        "nsavinov/nova-json-schema-field": "^1.0",
+        "silvanite/nova-field-cloudinary": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0f380c4222f3d48287af59c9739fc16",
+    "content-hash": "417c4f60f45574819916ca65865abbb4",
     "packages": [
         {
             "name": "64robots/nova-fields",
@@ -103,6 +103,101 @@
                 "time"
             ],
             "time": "2018-10-18T22:02:21+00:00"
+        },
+        {
+            "name": "carlosocarvalho/flysystem-cloudinary",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carlosocarvalho/flysystem-cloudinary.git",
+                "reference": "1179451bb5db6fb36fb6796b63b7fbe2e25456c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlosocarvalho/flysystem-cloudinary/zipball/1179451bb5db6fb36fb6796b63b7fbe2e25456c6",
+                "reference": "1179451bb5db6fb36fb6796b63b7fbe2e25456c6",
+                "shasum": ""
+            },
+            "require": {
+                "cloudinary/cloudinary_php": "^1.3",
+                "league/flysystem": "^1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CarlosOCarvalho\\Flysystem\\Cloudinary\\": "src/",
+                    "CarlosOCarvalho\\Flysystem\\Cloudinary\\Test\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "carlosocarvalho",
+                    "email": "carlosocarvalho.com.br@gmail.com"
+                }
+            ],
+            "description": "Flysystem adapter for Cloudinary",
+            "time": "2016-02-02T20:11:18+00:00"
+        },
+        {
+            "name": "cloudinary/cloudinary_php",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cloudinary/cloudinary_php.git",
+                "reference": "d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cloudinary/cloudinary_php/zipball/d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7",
+                "reference": "d7db89b53e7ddbfdcd7a0946b963b7878e7ca9c7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/Helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cloudinary",
+                    "homepage": "https://github.com/cloudinary/cloudinary_php/graphs/contributors"
+                }
+            ],
+            "description": "Cloudinary PHP SDK",
+            "homepage": "https://github.com/cloudinary/cloudinary_php",
+            "keywords": [
+                "cdn",
+                "cloud",
+                "cloudinary",
+                "image management",
+                "sdk"
+            ],
+            "time": "2018-10-11T13:21:48+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -1967,6 +2062,47 @@
             "time": "2018-10-10T09:24:14+00:00"
         },
         {
+            "name": "nsavinov/nova-json-schema-field",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NikolaySav/nova-json-schema-field.git",
+                "reference": "9f2e679d789a241b6a6c74bd7774d66492ce6af1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NikolaySav/nova-json-schema-field/zipball/9f2e679d789a241b6a6c74bd7774d66492ce6af1",
+                "reference": "9f2e679d789a241b6a6c74bd7774d66492ce6af1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nsavinov\\NovaJsonSchemaField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nsavinov\\NovaJsonSchemaField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field for JSON Schema",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-06T11:26:37+00:00"
+        },
+        {
             "name": "opis/closure",
             "version": "3.1.1",
             "source": {
@@ -2556,6 +2692,65 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "silvanite/nova-field-cloudinary",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Silvanite/nova-field-cloudinary.git",
+                "reference": "8f5d41a422f8bc2812427ea7397e8a1e3857f01a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Silvanite/nova-field-cloudinary/zipball/8f5d41a422f8bc2812427ea7397e8a1e3857f01a",
+                "reference": "8f5d41a422f8bc2812427ea7397e8a1e3857f01a",
+                "shasum": ""
+            },
+            "require": {
+                "carlosocarvalho/flysystem-cloudinary": "^1.0",
+                "laravel/framework": ">=5.0.0",
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": ">=3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Silvanite\\NovaFieldCloudinary\\Providers\\PackageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src-php/helpers.php"
+                ],
+                "psr-4": {
+                    "Silvanite\\NovaFieldCloudinary\\": "src-php/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Mark",
+                    "email": "m2de@outlook.com"
+                }
+            ],
+            "description": "A Laravel Nova Image Field with Flysystem Adapter for storing and retrieving media from Cloudinary",
+            "keywords": [
+                "cloudinary",
+                "field",
+                "images",
+                "laravel",
+                "media",
+                "nova"
+            ],
+            "time": "2018-10-30T11:38:07+00:00"
         },
         {
             "name": "spatie/once",

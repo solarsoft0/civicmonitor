@@ -20,10 +20,10 @@ class CreatePoliticiansTable extends Migration
             $table->json('other_names')->nullable();
             $table->string('email');
             $table->string('gender');
-            $table->date('birth-date');
-            $table->date('death-date')->nullable();
+            $table->date('birth_date');
+            $table->date('death_date')->nullable();
             $table->string('image')->nullable();
-            $table->string('cover-image')->nullable();
+            $table->string('cover_image')->nullable();
             $table->text('summary')->nullable();
             $table->text('biography')->nullable();
             $table->string('national_identity')->nullable();

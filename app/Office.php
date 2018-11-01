@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Office extends Model
 {
-    public function types() {
-        return $this->hasOne(App\OfficeType::class);
+    public function office_type() {
+        return $this->BelongsTo(OfficeType::class);
     }
 }

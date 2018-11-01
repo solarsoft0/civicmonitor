@@ -16,9 +16,10 @@ class CreatePoliticalPartiesTable extends Migration
         Schema::create('political_parties', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('description');
+            $table->text('description')->nullable();
             $table->string('acronym');
-            $table->date('founded_date');
+            $table->string('logo')->nullable();
+            $table->date('founded_date')->nullable();
            $table->timestamps();
           
 

@@ -3,6 +3,9 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Date;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -41,6 +44,11 @@ class Membership extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make("Politician")->sortable(),
+            BelongsTo::make("Political Party")->sortable(),
+            BelongsTo::make("Position")->sortable(),
+            Date::make("Start Date"),
+            Date::make("End Date"),
         ];
     }
 
