@@ -5,6 +5,8 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
+use Silvanite\NovaFieldCloudinary\Fields\CloudinaryImage;
+
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\File;
 use Illuminate\Http\Request;
@@ -58,6 +60,7 @@ JSON::make('sources', [
               Text::make('source_link'),
               Text::make('source_link'),
           ])->hideFromIndex(),
+          CloudinaryImage::make('infographic'),
         ];
     }
 

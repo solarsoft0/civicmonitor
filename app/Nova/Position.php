@@ -4,7 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\TextArea;
+use Laravel\Nova\Fields\Textarea;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -45,7 +45,7 @@ class Position extends Resource
         return [
             ID::make()->sortable(),
             Text::make("Position")->sortable(),
-            TextArea::make("Role Description")->sortable(),
+            Textarea::make("Role Description")->sortable(),
         ];
     }
 

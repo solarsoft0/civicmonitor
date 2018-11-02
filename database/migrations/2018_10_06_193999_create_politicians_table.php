@@ -18,7 +18,7 @@ class CreatePoliticiansTable extends Migration
             $table->string('title');
             $table->string('name');
             $table->json('other_names')->nullable();
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('gender');
             $table->date('birth_date');
             $table->date('death_date')->nullable();
