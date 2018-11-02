@@ -4,7 +4,7 @@ namespace App\Nova;
 
 use Silvanite\NovaFieldCloudinary\Fields\CloudinaryImage;
 use Laravel\Nova\Panel;
-
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
@@ -73,26 +73,26 @@ class Politician extends Resource
             Date::make("Death Date")->hideFromIndex(),
             CloudinaryImage::make("Image"),
             CloudinaryImage::make("Cover Image")->hideFromIndex(),
-            Trix::make("Summary"),
+            Textarea::make("Summary"),
             Trix::make("Biography")->hideFromIndex(),
             Select::make('National Identity')->options([
     'Nigerian' => 'Nigerian',
 ]),
 JSON::make('Contact Details', [
-                    TextArea::make('Contact Detail 1'),
-                    TextArea::make('Contact Detail 2'),
+                    Textarea::make('Contact Detail 1'),
+                    Textarea::make('Contact Detail 2'),
             ])->hideFromIndex(),
         JSON::make('Links', [
-                    TextArea::make('Website')->help(
+                    Textarea::make('Website')->help(
     'seperate with comma "," '
 ),
-                   TextArea::make('Social Media')->help(
+                   Textarea::make('Social Media')->help(
     'seperate with comma "," '
 ),
                ])->hideFromIndex(), 
-                           TextArea::make("Honors")->hideFromIndex(),
-            TextArea::make("Works")->hideFromIndex(),
-            TextArea::make("Family")->hideFromIndex(),
+                           Textarea::make("Honors")->hideFromIndex(),
+            Textarea::make("Works")->hideFromIndex(),
+            Textarea::make("Family")->hideFromIndex(),
                     new Panel('Education', $this->educationFields()),
 
                HasMany::make('Memberships')->hideFromIndex(),
@@ -104,9 +104,9 @@ JSON::make('Contact Details', [
     protected function educationFields()
 {
     return [
-       TextArea::make("Primary","education_primary")->hideFromIndex(),
-            TextArea::make("Secondary","education_secondary")->hideFromIndex(),
-            TextArea::make("University","education_university")->hideFromIndex(),
+       Textarea::make("Primary","education_primary")->hideFromIndex(),
+            Textarea::make("Secondary","education_secondary")->hideFromIndex(),
+            Textarea::make("University","education_university")->hideFromIndex(),
     ];
 }
 
