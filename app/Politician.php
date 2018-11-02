@@ -9,6 +9,10 @@ class Politician extends Model
       protected $casts = [
     'birth_date' => 'date',
     'death_date' => 'date',
+    'start_date' => 'date',
+    'end_date' => 'date',
+
+
 ];
 
 public function Memberships() {
@@ -17,7 +21,7 @@ public function Memberships() {
 
   public function candidates() {
     return  $this->hasManyThrough(Candidate::class, Membership::class);
-    return  $this->hasMany(Candidate::class);
+    // return  $this->hasMany(Candidate::class);
   } 
 
 

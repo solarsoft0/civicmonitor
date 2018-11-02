@@ -5,6 +5,7 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Date;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -17,6 +18,8 @@ class Membership extends Resource
      * @var string
      */
     public static $model = 'App\Membership';
+    public static $with = ['politician'];
+
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -34,6 +37,16 @@ class Membership extends Resource
         'id',
     ];
 
+
+    public function title()
+{
+    return $this->id .". Politician Name ". $this->politician->name;
+}
+
+public function subtitle()
+{
+    return "Political Party: ".$this->political_party->name;
+}
     /**
      * Get the fields displayed by the resource.
      *
@@ -47,10 +60,14 @@ class Membership extends Resource
             BelongsTo::make("Politician")->sortable(),
             BelongsTo::make("Political Party")->sortable(),
             BelongsTo::make("Position")->sortable(),
-            Date::make("Start Date"),
-            Date::make("End Date"),
+            Date::make("Start Date")->hideFromIndex(),
+            Date::make("End Date")->hideFromIndex(),
+            HasMany::make("Candidate")->hideFromIndex()
         ];
-    }
+    }   
+
+
+    
 
     /**
      * Get the cards available for the request.

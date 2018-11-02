@@ -4,6 +4,7 @@ namespace App\Nova;
 
 
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\TextArea;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -43,6 +44,7 @@ class OfficeType extends Resource
 
         return [
             Text::make("Name")->sortable(),
+            TextArea::make("Description")->sortable(),
         ];
     }
 

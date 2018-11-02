@@ -3,10 +3,13 @@
 namespace App\Nova;
 
 use Silvanite\NovaFieldCloudinary\Fields\CloudinaryImage;
+use Laravel\Nova\Panel;
+
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\TextArea;
@@ -57,36 +60,56 @@ class Politician extends Resource
             Text::make("Name"),
             JSON::make('Other Names',[
                     Text::make('Name'),
-                    Text::make('Start Date'),
-                    Text::make('End Date'),
+                    Date::make('Start Date'),
+                    Date::make('End Date'),
                     Text::make('Note'),
                 
-            ]),
+            ])->hideFromIndex(),
             Text::make("Email"),
-            Text::make("Gender"),
-            Date::make("Birth Date"),
-            Date::make("Death Date"),
+            Select::make('Gender')->options([
+    'Male' => 'Male',
+    'Female' => 'Female',
+ ])->hideFromIndex(),
+            Date::make("Birth Date")->hideFromIndex(),
+            Date::make("Death Date")->hideFromIndex(),
             CloudinaryImage::make("Image"),
-            CloudinaryImage::make("Cover Image"),
+            CloudinaryImage::make("Cover Image")->hideFromIndex(),
             TextArea::make("Summary"),
-            Trix::make("Biography"),
-            Text::make("National Identity"),
+            Trix::make("Biography")->hideFromIndex(),
+            Select::make('National Identity')->options([
+    'Nigerian' => 'Nigerian',
+]),
 JSON::make('Contact Details', [
                     TextArea::make('Contact Detail 1'),
                     TextArea::make('Contact Detail 2'),
-            ]),
+            ])->hideFromIndex(),
         JSON::make('Links', [
-                    Text::make('Website')->help(
+                    TextArea::make('Website')->help(
     'seperate with comma "," '
 ),
-                   Text::make('Social-Media')->help(
+                   TextArea::make('Social Media')->help(
     'seperate with comma "," '
 ),
-               ]), 
-               HasMany::make('Memberships'),
-               HasMany::make('Candidates'),
+               ])->hideFromIndex(), 
+                           TextArea::make("Honors")->hideFromIndex(),
+            TextArea::make("Works")->hideFromIndex(),
+            TextArea::make("Family")->hideFromIndex(),
+                    new Panel('Education', $this->educationFields()),
+
+               HasMany::make('Memberships')->hideFromIndex(),
 ];
     }
+
+
+
+    protected function educationFields()
+{
+    return [
+       TextArea::make("Primary","education_primary")->hideFromIndex(),
+            TextArea::make("Secondary","education_secondary")->hideFromIndex(),
+            TextArea::make("University","education_university")->hideFromIndex(),
+    ];
+}
 
     /**
      * Get the cards available for the request.

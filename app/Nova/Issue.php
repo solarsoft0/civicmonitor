@@ -46,8 +46,8 @@ class Issue extends Resource
         return [
             ID::make()->sortable(),
             Text::make("Title"),
-            Text::make("Description"),
-BelongsTo::make('Election') 
+            Text::make("Description")->hideFromIndex(),
+BelongsTo::make('Election')->hideFromIndex()
       ];
     }
 

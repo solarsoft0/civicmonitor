@@ -46,10 +46,10 @@ class PoliticalParty extends Resource
         return [
             ID::make()->sortable(),
             Text::make("Name"),
-            Textarea::make("Description"),
+            Textarea::make("Description")->hideFromIndex(),
             Text::make("Acronym"),
-            CloudinaryImage::make("Logo"),
-            Date::make("Founded Date"),
+            CloudinaryImage::make("Logo")->hideFromIndex(),
+            Date::make("Founded Date")->hideFromIndex(),
         ];
     }
 

@@ -21,9 +21,9 @@ class Membership extends Model
         return $this->BelongsTo(Politician::class);
     }
 
-    public function candidates()    
+    public function candidate()
     {
-        return $this->hasOne(Candidate::class);
+        return $this->hasMany(Candidate::class);
     }
 
     public function position()

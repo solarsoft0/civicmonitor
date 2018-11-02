@@ -9,9 +9,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Candidate extends Model
 {
-    public function issuePositions()
+    public function issue_positions()
     {
         return $this->hasMany(IssuePosition::class);
+    }
+
+    public function election_type()
+    {
+        return $this->belongsTo(ElectionType::class);
+    }
+    public function election()
+    {
+        return $this->belongsTo(Election::class);
+    }
+    public function office()
+    {
+        return $this->belongsTo(Office::class);
+    }
+    public function Membership()
+    {
+        return $this->belongsTo(Membership::class);
     }
 
     public function political_parties()
@@ -19,7 +36,7 @@ class Candidate extends Model
             return  $this->hasManyThrough(PoliticalParty::class, Membership::class);
 
     }
-
+    
     public function profile()
     {
         return $this->belongsTo(Politician::class);

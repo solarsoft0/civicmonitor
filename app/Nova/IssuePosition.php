@@ -47,18 +47,17 @@ class IssuePosition extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
-            BelongsTo::make("Issue")->sortable(),
             BelongsTo::make("Candidate")->sortable(),
+            BelongsTo::make("Issue")->sortable(),
             Text::make("Title"),
             Trix::make("Body"),
-            File::make("Audio"),
+            File::make("Audio")->hideFromIndex(),
 JSON::make('sources', [
               Text::make('source_link'),
               Text::make('source_link'),
               Text::make('source_link'),
               Text::make('source_link'),
-          ]),
+          ])->hideFromIndex(),
         ];
     }
 

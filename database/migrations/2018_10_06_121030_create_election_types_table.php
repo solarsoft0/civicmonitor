@@ -16,6 +16,7 @@ class CreateElectionTypesTable extends Migration
         Schema::create('election_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('description')->nullable();
 
         });
     }
