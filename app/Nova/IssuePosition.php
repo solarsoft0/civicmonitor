@@ -55,10 +55,9 @@ class IssuePosition extends Resource
             Trix::make("Body"),
             File::make("Audio")->hideFromIndex(),
 JSON::make('sources', [
-              Text::make('source_link'),
-              Text::make('source_link'),
-              Text::make('source_link'),
-              Text::make('source_link'),
+              Text::make('source Link 1'),
+              Text::make('source Link 2'),
+              Text::make('source Link 3'),
           ])->hideFromIndex(),
           CloudinaryImage::make('infographic'),
         ];
