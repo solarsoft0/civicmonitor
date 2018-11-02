@@ -74,7 +74,7 @@ class Politician extends Resource
             Date::make("Death Date")->hideFromIndex(),
             CloudinaryImage::make("Image"),
             CloudinaryImage::make("Cover Image")->hideFromIndex(),
-            TextArea::make("Summary"),
+            Trix::make("Summary"),
             Trix::make("Biography")->hideFromIndex(),
             Select::make('National Identity')->options([
     'Nigerian' => 'Nigerian',
