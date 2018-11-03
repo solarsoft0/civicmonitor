@@ -22,7 +22,9 @@ class PoliticianController extends Controller
      */
     public function index()
     {
-        $politicians = Politician::paginate(15);
+
+
+        $politicians = Politician::with("candidates","memberships")->paginate(15);
 
         return response($politicians);
 

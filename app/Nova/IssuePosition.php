@@ -58,6 +58,10 @@ JSON::make('sources', [
               Text::make('source Link 1'),
               Text::make('source Link 2'),
               Text::make('source Link 3'),
+              Text::make('source Link 4'),
+              Text::make('source Link 5'),
+              Text::make('source Link 6'),
+              Text::make('source Link 7'),
           ])->hideFromIndex(),
           CloudinaryImage::make('infographic'),
         ];

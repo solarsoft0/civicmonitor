@@ -67,7 +67,8 @@ class CandidateController extends Controller
      */
     public function show(Candidate $candidate)
     {
-        return response($candidate);
+
+        return response($candidate->with('membership.political_party','membership.politician')->get());
 
     }
 
@@ -127,11 +128,12 @@ class CandidateController extends Controller
 
     public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
     {
-        $candidateIssuePositions = $candidate->load('issuePositions.issue')->get();
-
+        $candidateIssuePositions = $candidate->with('issue_positions','issue_positions.issue')->get();
+    
         if (request()->wantsJson()) {
-            return response($candidateIssuePositions, 201);
+            return response($candidateIssuePositions, 200);
         }
+            return response($candidateIssuePositions, 200);
 
     }
 
@@ -144,10 +146,11 @@ class CandidateController extends Controller
 
     public function candidatePoliticalParties(Candidate $candidate, CandidatePoliticalPartiesRequest $request)
     {
-        $candidateIssuePositions = $candidate->load('politicalParties')->get();
+        $candidateIssuePositions = $candidate->with('membership.political_party')->get();
+        $candidateIssuePositions =collect($candidateIssuePositions[0]->membership->political_party);
 
         if (request()->wantsJson()) {
-            return response($candidateIssuePositions, 201);
+            return response($candidateIssuePositions, 200);
         }
 
     }

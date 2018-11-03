@@ -2,7 +2,7 @@
     "variables": [],
     "info": {
         "name": "",
-        "_postman_id": "92bbf444-6332-4c2b-845d-604a74a4342a",
+        "_postman_id": "cdbe8b6b-d28e-44bf-8c03-08a9d3dc2e60",
         "description": "",
         "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
     },
@@ -14,7 +14,7 @@
                 {
                     "name": "Get a Candidate Issue Positions.",
                     "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}/issue-positions",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}/issue-positions",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
@@ -24,7 +24,7 @@
                 {
                     "name": "Get a Candidate Political Parties.",
                     "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}/candidate-political-parties",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}/political-parties",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
@@ -34,111 +34,9 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/candidates",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/candidates/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/candidates",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "title",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "name",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "other_names",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "email",
-                                    "value": "lemke.hailee@example.org",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "gender",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "birth-date",
-                                    "value": "1980-04-15",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "death-date",
-                                    "value": "1980-04-15",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "image",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "cover-image",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "summary",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "biography",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "national_identity",
-                                    "value": "non",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "contact_details",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -146,126 +44,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}",
-                        "method": "PUT",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 32595,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "title",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "name",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "other_names",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "email",
-                                    "value": "evert.heller@example.net",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "gender",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "birth-date",
-                                    "value": "1991-10-23",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "death-date",
-                                    "value": "1991-10-23",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "image",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "cover-image",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "summary",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "biography",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "national_identity",
-                                    "value": "ducimus",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "contact_details",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/candidates/{candidate}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -280,51 +60,9 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/educations",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/educations",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/educations/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/educations",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "candidate_id",
-                                    "value": "ut",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "levels",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "notes",
-                                    "value": "ut",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -332,66 +70,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/educations/{education}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/educations/{education}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/educations/{education}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/educations/{education}",
-                        "method": "PUT",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 4907918,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "candidate_id",
-                                    "value": "quod",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "levels",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "notes",
-                                    "value": "quod",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/educations/{education}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -406,45 +86,9 @@
                 {
                     "name": "Display a listing of the election resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/elections",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/elections",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new election resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/elections/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created election resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/elections",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "name",
-                                    "value": "qui",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "year",
-                                    "value": 96,
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -452,60 +96,8 @@
                 {
                     "name": "Display the specified election resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/elections/{election}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/elections/{election}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified election resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/elections/{election}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified election resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/elections/{election}",
-                        "method": "PUT",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 84118,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "name",
-                                    "value": "quos",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "year",
-                                    "value": 84118,
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified election resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/elections/{election}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -520,51 +112,9 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/election-types",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/election-types",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/election-types/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/election-types",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "candidate_id",
-                                    "value": "perspiciatis",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "levels",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "notes",
-                                    "value": "perspiciatis",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -572,38 +122,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/election-types/{election_type}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/election-types/{election_type}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/election-types/{election_type}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/election-types/{election_type}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/election-types/{election_type}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -618,51 +138,9 @@
                 {
                     "name": "Display a listing of the Issue resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/issues",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issues",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new Issue resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issues/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created Issue resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issues",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "title",
-                                    "value": "sed",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "description",
-                                    "value": "sed",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "election_id",
-                                    "value": "sed",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -670,66 +148,8 @@
                 {
                     "name": "Display the specified Issue resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/issues/{issue}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issues/{issue}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified Issue resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issues/{issue}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified Issue resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issues/{issue}",
-                        "method": "PUT",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 63,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "title",
-                                    "value": "eos",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "description",
-                                    "value": "eos",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "election_id",
-                                    "value": "eos",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified Issue resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issues/{issue}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -744,28 +164,8 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/issuePositions",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issuePositions",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issuePositions/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issuePositions",
-                        "method": "POST",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -774,38 +174,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/issuePositions/{issuePosition}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issuePositions/{issuePosition}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issuePositions/{issuePosition}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issuePositions/{issuePosition}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/issuePositions/{issuePosition}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -820,28 +190,8 @@
                 {
                     "name": "Display a listing of the Membership resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/memberships",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/memberships",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new Membership resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/memberships/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created Membership resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/memberships",
-                        "method": "POST",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -850,38 +200,8 @@
                 {
                     "name": "Display the specified Membership resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/memberships/{membership}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/memberships/{membership}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified Membership resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/memberships/{membership}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified Membership resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/memberships/{membership}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified Membership resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/memberships/{membership}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -896,28 +216,8 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/offices",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/offices",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/offices/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/offices",
-                        "method": "POST",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -926,38 +226,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/offices/{office}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/offices/{office}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/offices/{office}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/offices/{office}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/offices/{office}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -972,28 +242,8 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/office-types",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/office-types",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/office-types/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/office-types",
-                        "method": "POST",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -1002,38 +252,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/office-types/{office_type}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/office-types/{office_type}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/office-types/{office_type}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/office-types/{office_type}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/office-types/{office_type}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -1048,117 +268,9 @@
                 {
                     "name": "Display a listing of the Politician resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/politicians",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/politicians",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new Politician resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/politicians/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created Politician resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/politicians",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "title",
-                                    "value": "quia",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "name",
-                                    "value": "quia",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "other_names",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "email",
-                                    "value": "hessel.claire@example.com",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "gender",
-                                    "value": "male",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "birth-date",
-                                    "value": "1976-01-26",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "death-date",
-                                    "value": "1976-01-26",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "image",
-                                    "value": "http://hessel.com/",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "cover-image",
-                                    "value": "http://hessel.com/",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "summary",
-                                    "value": "quia",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "biography",
-                                    "value": "quia",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "national_identity",
-                                    "value": "quia",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "contact_details",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "links",
-                                    "value": "[\"foo\",\"bar\",\"baz\"]",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -1166,38 +278,8 @@
                 {
                     "name": "Display the specified Politician resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/politicians/{politician}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/politicians/{politician}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified Politician resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/politicians/{politician}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified Politician resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/politicians/{politician}",
-                        "method": "PUT",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified Politician resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/politicians/{politician}",
-                        "method": "DELETE",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []
@@ -1212,51 +294,9 @@
                 {
                     "name": "Display a listing of the resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/positions",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/positions",
                         "method": "GET",
                         "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for creating a new resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/positions/create",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Store a newly created resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/positions",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "role",
-                                    "value": "id",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "political_party_id",
-                                    "value": "id",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "position",
-                                    "value": "id",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
                         "description": "",
                         "response": []
                     }
@@ -1264,170 +304,8 @@
                 {
                     "name": "Display the specified resource.",
                     "request": {
-                        "url": "{{url}}/api/v1/positions/{position}",
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/positions/{position}",
                         "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Show the form for editing the specified resource.",
-                    "request": {
-                        "url": "{{url}}/api/v1/positions/{position}/edit",
-                        "method": "GET",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Update the specified resource in storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/positions/{position}",
-                        "method": "PUT",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 91867,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "role",
-                                    "value": "qui",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "political_party_id",
-                                    "value": "qui",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "position",
-                                    "value": "qui",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Remove the specified resource from storage.",
-                    "request": {
-                        "url": "{{url}}/api/v1/positions/{position}",
-                        "method": "DELETE",
-                        "body": { "mode": "formdata", "formdata": [] },
-                        "description": "",
-                        "response": []
-                    }
-                }
-            ]
-        },
-        {
-            "name": "User\n\nUser Resource Login, Register, Details etc",
-            "description": "",
-            "item": [
-                {
-                    "name": "Login endpoint",
-                    "request": {
-                        "url": "{{url}}/api/v1/login",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "email",
-                                    "value": "harmon85@example.com",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "password",
-                                    "value": "dolorum",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Register endpoint",
-                    "request": {
-                        "url": "{{url}}/api/v1/register",
-                        "method": "POST",
-                        "body": {
-                            "mode": "formdata",
-                            "formdata": [
-                                {
-                                    "key": "id",
-                                    "value": 95552243,
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "first_name",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "last_name",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "email",
-                                    "value": "mwilkinson@example.com",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "password",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "c_password",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "username",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                },
-                                {
-                                    "key": "phone_number",
-                                    "value": "dolor",
-                                    "type": "text",
-                                    "enabled": true
-                                }
-                            ]
-                        },
-                        "description": "",
-                        "response": []
-                    }
-                },
-                {
-                    "name": "Details endpoint",
-                    "request": {
-                        "url": "{{url}}/api/v1/details",
-                        "method": "POST",
                         "body": { "mode": "formdata", "formdata": [] },
                         "description": "",
                         "response": []

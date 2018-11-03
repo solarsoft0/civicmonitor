@@ -23,21 +23,21 @@ Welcome to the generated API reference.
 #Candidate
 
 Candidate CRUD Resource and ...
-<!-- START_05121932cfd6ab1b8b1fe5c77dada25b -->
+<!-- START_9c68d1ebd8a35a27bacb5d2394a90d04 -->
 ## Get a Candidate Issue Positions.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/candidates/{candidate}/issue-positions" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/candidates/{candidate}/issue-positions" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}/issue-positions",
+    "url": "http://localhost/api/v2/candidates/{candidate}/issue-positions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -52,68 +52,62 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-[]
+[
+    {
+        "id": 5,
+        "election_id": 1,
+        "election_type_id": 3,
+        "office_id": 1,
+        "membership_id": 2,
+        "created_at": "2018-11-02 08:28:46",
+        "updated_at": "2018-11-02 08:28:46",
+        "issue_positions": [
+            {
+                "id": 1,
+                "issue_id": 1,
+                "candidate_id": 5,
+                "title": "MY position on this issue",
+                "body": "<div><em>“Our economy has witnessed serious macroeconomic distortions and dislocations over the years. Spiraling inflation, unemployment, gross capacity under-utilization in our industries, and the over-dependence on oil revenues have remained with us for a very long time now. To address these central problems which underline other economic difficulties we covenant to diversity the National Economy by encouraging development in non-petroleum producing sectors in order to reduce dependence on oil a main source of our National income as follows:&nbsp;<\/em><\/div><div><em>&nbsp;Increase efficiency and productivity in agriculture, mining, and manufacturing sector.&nbsp;<\/em><\/div><div><em>Embark on gas development, conversion and utilization programmes.&nbsp;<\/em><\/div><div><em>Promote exports through various incentives. Support massive applied scientific research and development for production of necessary goods for economic emancipation.&nbsp;<\/em><\/div><div><em>Encourage the establishment and development of ‘small medium scale enterprises as engines of; economic growth.<\/em><\/div><div><em>Create a suitable environment for foreign investment to flow into the, country.&nbsp;<\/em><\/div><div><em>Strengthen the Naira so that it may freely find its true value in the international currency market.&nbsp;<\/em><\/div><div><em>Formulate and implement disciplined, budget, fiscal and monetary policies.<\/em><\/div><div><em>Work assiduously, to eradicate corruption, fraud, embezzlement and the so-called “Nigerian Way” and to enthrone a new culture of integrity, Transparency and Accountability.&nbsp;<\/em><\/div><ul><li><em>Put the organized private sector into more confidence so that they can be genuinely involved in the revamping and management of the national economy.&nbsp;<\/em><\/li><\/ul><div><em>Turn the abundant arable land of this country to be the food basket of Africa and oven the world.<\/em><\/div><div><em>Encourage industrialists to develop local substitutes for important raw materials and to use the raw materials front put enhanced agricultural production the catalyst for our industrial revolution.<\/em><\/div><div><em>Cut out waste in public finance.<\/em><\/div><div><em>Set out targets for growth rates in the economic.&nbsp;<\/em><\/div><div><em>Enlist the interest of labour unions in all activities so that peaceful relations can be created in the country.<\/em><\/div><div><em>Put in place an energy policy that will ensure efficient exploitation, distribution and&nbsp;<\/em><\/div><div><br><br><\/div>",
+                "audio": null,
+                "infographic": null,
+                "sources": "{\"source_link\":null}",
+                "created_at": "2018-11-02 09:16:53",
+                "updated_at": "2018-11-02 09:16:53",
+                "issue": {
+                    "id": 1,
+                    "title": "Economy + inclusive growth",
+                    "description": "More Description",
+                    "election_id": 1,
+                    "created_at": "2018-11-02 09:15:05",
+                    "updated_at": "2018-11-02 09:15:05"
+                }
+            }
+        ]
+    }
+]
 ```
 
 ### HTTP Request
-`GET api/v1/candidates/{candidate}/issue-positions`
+`GET api/v2/candidates/{candidate}/issue-positions`
 
 
-<!-- END_05121932cfd6ab1b8b1fe5c77dada25b -->
+<!-- END_9c68d1ebd8a35a27bacb5d2394a90d04 -->
 
-<!-- START_dfad8eb7c654a25286d673249cd8e8e3 -->
+<!-- START_cf2ff0457f9e9033cd4b4cfe645a18a9 -->
 ## Get a Candidate Political Parties.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/candidates/{candidate}/candidate-political-parties" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/candidates/{candidate}/political-parties" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}/candidate-political-parties",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-[]
-```
-
-### HTTP Request
-`GET api/v1/candidates/{candidate}/candidate-political-parties`
-
-
-<!-- END_dfad8eb7c654a25286d673249cd8e8e3 -->
-
-<!-- START_2f3598170f8b5efb6cf46e706023421e -->
-## Display a listing of the resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/candidates" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates",
+    "url": "http://localhost/api/v2/candidates/{candidate}/political-parties",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -129,163 +123,103 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "data": [],
+    "id": 1,
+    "name": "All Progressives Congress",
+    "description": "The All Progressives Congress is a political party in Nigeria, formed on 6 February 2013 in anticipation of the 2015 elections.",
+    "acronym": "APC",
+    "logo": "lZoBTYud5VqjBxYQNkPR8a1zti1ysZTTNFUGVLta.jpeg",
+    "founded_date": "2013-02-06 00:00:00",
+    "created_at": "2018-11-01 15:49:27",
+    "updated_at": "2018-11-01 15:49:27"
+}
+```
+
+### HTTP Request
+`GET api/v2/candidates/{candidate}/political-parties`
+
+
+<!-- END_cf2ff0457f9e9033cd4b4cfe645a18a9 -->
+
+<!-- START_ebf67d75cab0b506c333d4e3de7075d6 -->
+## Display a listing of the resource.
+
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost/api/v2/candidates" \
+    -H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v2/candidates",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "data": [
+        {
+            "id": 5,
+            "election_id": 1,
+            "election_type_id": 3,
+            "office_id": 1,
+            "membership_id": 2,
+            "created_at": "2018-11-02 08:28:46",
+            "updated_at": "2018-11-02 08:28:46"
+        }
+    ],
     "links": {
-        "first": "http:\/\/localhost\/api\/v1\/candidates?page=1",
-        "last": "http:\/\/localhost\/api\/v1\/candidates?page=1",
+        "first": "http:\/\/localhost\/api\/v2\/candidates?page=1",
+        "last": "http:\/\/localhost\/api\/v2\/candidates?page=1",
         "prev": null,
         "next": null
     },
     "meta": {
         "current_page": 1,
-        "from": null,
+        "from": 1,
         "last_page": 1,
-        "path": "http:\/\/localhost\/api\/v1\/candidates",
+        "path": "http:\/\/localhost\/api\/v2\/candidates",
         "per_page": 15,
-        "to": null,
-        "total": 0
+        "to": 1,
+        "total": 1
     }
 }
 ```
 
 ### HTTP Request
-`GET api/v1/candidates`
+`GET api/v2/candidates`
 
 
-<!-- END_2f3598170f8b5efb6cf46e706023421e -->
+<!-- END_ebf67d75cab0b506c333d4e3de7075d6 -->
 
-<!-- START_0e32e1cc10ac16e49906d5715e1030a7 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/candidates/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/candidates/create`
-
-
-<!-- END_0e32e1cc10ac16e49906d5715e1030a7 -->
-
-<!-- START_304ed7287a2bfbfc810349ea6275b088 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/candidates" \
--H "Accept: application/json" \
-    -d "title"="non" \
-    -d "name"="non" \
-    -d "other_names"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "email"="lemke.hailee@example.org" \
-    -d "gender"="non" \
-    -d "birth-date"="1980-04-15" \
-    -d "death-date"="1980-04-15" \
-    -d "image"="non" \
-    -d "cover-image"="non" \
-    -d "summary"="non" \
-    -d "biography"="non" \
-    -d "national_identity"="non" \
-    -d "contact_details"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates",
-    "method": "POST",
-    "data": {
-        "title": "non",
-        "name": "non",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "lemke.hailee@example.org",
-        "gender": "non",
-        "birth-date": "1980-04-15",
-        "death-date": "1980-04-15",
-        "image": "non",
-        "cover-image": "non",
-        "summary": "non",
-        "biography": "non",
-        "national_identity": "non",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/candidates`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    title | string |  required  | 
-    name | string |  required  | Maximum: `255`
-    other_names | string |  optional  | Must be a valid JSON string.
-    email | email |  required  | 
-    gender | string |  required  | 
-    birth-date | date |  required  | 
-    death-date | date |  optional  | 
-    image | image |  optional  | Must be an image (jpeg, png, bmp, gif, or svg)
-    cover-image | image |  optional  | Must be an image (jpeg, png, bmp, gif, or svg)
-    summary | string |  optional  | 
-    biography | string |  required  | 
-    national_identity | string |  optional  | 
-    contact_details | string |  optional  | Must be a valid JSON string.
-
-<!-- END_304ed7287a2bfbfc810349ea6275b088 -->
-
-<!-- START_903f3a9aed1d94e6b43e05602db6b266 -->
+<!-- START_6e6184fca7716c8d5047fe9e500f12a0 -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/candidates/{candidate}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/candidates/{candidate}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}",
+    "url": "http://localhost/api/v2/candidates/{candidate}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -304,184 +238,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/candidates/{candidate}`
+`GET api/v2/candidates/{candidate}`
 
 
-<!-- END_903f3a9aed1d94e6b43e05602db6b266 -->
-
-<!-- START_1d3201b871ec94840e47580e6c0141ff -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/candidates/{candidate}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/candidates/{candidate}/edit`
-
-
-<!-- END_1d3201b871ec94840e47580e6c0141ff -->
-
-<!-- START_857511df16834453c5feb168f1123d68 -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/candidates/{candidate}" \
--H "Accept: application/json" \
-    -d "id"="32595" \
-    -d "title"="ducimus" \
-    -d "name"="ducimus" \
-    -d "other_names"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "email"="evert.heller@example.net" \
-    -d "gender"="ducimus" \
-    -d "birth-date"="1991-10-23" \
-    -d "death-date"="1991-10-23" \
-    -d "image"="ducimus" \
-    -d "cover-image"="ducimus" \
-    -d "summary"="ducimus" \
-    -d "biography"="ducimus" \
-    -d "national_identity"="ducimus" \
-    -d "contact_details"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}",
-    "method": "PUT",
-    "data": {
-        "id": 32595,
-        "title": "ducimus",
-        "name": "ducimus",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "evert.heller@example.net",
-        "gender": "ducimus",
-        "birth-date": "1991-10-23",
-        "death-date": "1991-10-23",
-        "image": "ducimus",
-        "cover-image": "ducimus",
-        "summary": "ducimus",
-        "biography": "ducimus",
-        "national_identity": "ducimus",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/candidates/{candidate}`
-
-`PATCH api/v1/candidates/{candidate}`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  required  | 
-    title | string |  optional  | 
-    name | string |  optional  | Maximum: `255`
-    other_names | string |  optional  | Must be a valid JSON string.
-    email | email |  optional  | 
-    gender | string |  optional  | 
-    birth-date | date |  optional  | 
-    death-date | date |  optional  | 
-    image | image |  optional  | Must be an image (jpeg, png, bmp, gif, or svg)
-    cover-image | image |  optional  | Must be an image (jpeg, png, bmp, gif, or svg)
-    summary | string |  optional  | 
-    biography | string |  optional  | 
-    national_identity | string |  optional  | 
-    contact_details | string |  optional  | Must be a valid JSON string.
-
-<!-- END_857511df16834453c5feb168f1123d68 -->
-
-<!-- START_82a3956a95e79a8966c28dea82cdbb0e -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/candidates/{candidate}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/candidates/{candidate}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/candidates/{candidate}`
-
-
-<!-- END_82a3956a95e79a8966c28dea82cdbb0e -->
+<!-- END_6e6184fca7716c8d5047fe9e500f12a0 -->
 
 #Education
 
 Education CRUD Resource and ...
-<!-- START_4d340187a15b68650e3e26289826e457 -->
+<!-- START_b58a47a36f9cee893f2dc9a67c31c1a3 -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/educations" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/educations" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/educations",
+    "url": "http://localhost/api/v2/educations",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -500,113 +279,26 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/educations`
+`GET api/v2/educations`
 
 
-<!-- END_4d340187a15b68650e3e26289826e457 -->
+<!-- END_b58a47a36f9cee893f2dc9a67c31c1a3 -->
 
-<!-- START_7f455f153ebbacc01b3a0c82c6f57759 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/educations/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/educations/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/educations/create`
-
-
-<!-- END_7f455f153ebbacc01b3a0c82c6f57759 -->
-
-<!-- START_0ed5bd2bb39fe562f55dbbf8204e30f5 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/educations" \
--H "Accept: application/json" \
-    -d "candidate_id"="ut" \
-    -d "levels"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "notes"="ut" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/educations",
-    "method": "POST",
-    "data": {
-        "candidate_id": "ut",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "ut"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/educations`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    candidate_id | string |  required  | 
-    levels | string |  optional  | Must be a valid JSON string.
-    notes | string |  optional  | 
-
-<!-- END_0ed5bd2bb39fe562f55dbbf8204e30f5 -->
-
-<!-- START_1c44b52ad94fc0408fcc2c66464a095f -->
+<!-- START_53649b5a334694beb186850ee55f760e -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/educations/{education}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/educations/{education}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/educations/{education}",
+    "url": "http://localhost/api/v2/educations/{education}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -625,154 +317,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/educations/{education}`
+`GET api/v2/educations/{education}`
 
 
-<!-- END_1c44b52ad94fc0408fcc2c66464a095f -->
-
-<!-- START_984ddba61b41203df126cd07b2c2f5a3 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/educations/{education}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/educations/{education}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/educations/{education}/edit`
-
-
-<!-- END_984ddba61b41203df126cd07b2c2f5a3 -->
-
-<!-- START_676e5de39359f34eb23363b340ae837a -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/educations/{education}" \
--H "Accept: application/json" \
-    -d "id"="4907918" \
-    -d "candidate_id"="quod" \
-    -d "levels"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "notes"="quod" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/educations/{education}",
-    "method": "PUT",
-    "data": {
-        "id": 4907918,
-        "candidate_id": "quod",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "quod"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/educations/{education}`
-
-`PATCH api/v1/educations/{education}`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  required  | 
-    candidate_id | string |  required  | 
-    levels | string |  optional  | Must be a valid JSON string.
-    notes | string |  optional  | 
-
-<!-- END_676e5de39359f34eb23363b340ae837a -->
-
-<!-- START_fbeaa20d6c471a803b9cc3cd796f346e -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/educations/{education}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/educations/{education}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/educations/{education}`
-
-
-<!-- END_fbeaa20d6c471a803b9cc3cd796f346e -->
+<!-- END_53649b5a334694beb186850ee55f760e -->
 
 #Election
 
 Election CRUD Resource and ...
-<!-- START_85b909af8cd46c6a6edb4d0891e74c91 -->
+<!-- START_f63aec21faf9cbb1021a8ad6383e9d84 -->
 ## Display a listing of the election resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/elections" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/elections" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/elections",
+    "url": "http://localhost/api/v2/elections",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -789,125 +356,47 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/elections?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "name": "Election 2019",
+            "year": 2019
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/elections?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/elections?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/elections?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/elections",
+    "path": "http:\/\/localhost\/api\/v2\/elections",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }
 ```
 
 ### HTTP Request
-`GET api/v1/elections`
+`GET api/v2/elections`
 
 
-<!-- END_85b909af8cd46c6a6edb4d0891e74c91 -->
+<!-- END_f63aec21faf9cbb1021a8ad6383e9d84 -->
 
-<!-- START_887b9f3cdab078eb54a401e3dc6e2337 -->
-## Show the form for creating a new election resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/elections/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/elections/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/elections/create`
-
-
-<!-- END_887b9f3cdab078eb54a401e3dc6e2337 -->
-
-<!-- START_21564cbbc3164e7e82a5a873f097b4e2 -->
-## Store a newly created election resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/elections" \
--H "Accept: application/json" \
-    -d "name"="qui" \
-    -d "year"="96" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/elections",
-    "method": "POST",
-    "data": {
-        "name": "qui",
-        "year": 96
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/elections`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    name | string |  required  | 
-    year | integer |  required  | 
-
-<!-- END_21564cbbc3164e7e82a5a873f097b4e2 -->
-
-<!-- START_7104db941574e1f23ab663b92fe02038 -->
+<!-- START_974114326a84e3e47c4f2f0e5aa2bfad -->
 ## Display the specified election resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/elections/{election}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/elections/{election}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/elections/{election}",
+    "url": "http://localhost/api/v2/elections/{election}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -926,151 +415,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/elections/{election}`
+`GET api/v2/elections/{election}`
 
 
-<!-- END_7104db941574e1f23ab663b92fe02038 -->
-
-<!-- START_e0c5aa1843cb22d5d5f39dc65c4a04b2 -->
-## Show the form for editing the specified election resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/elections/{election}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/elections/{election}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/elections/{election}/edit`
-
-
-<!-- END_e0c5aa1843cb22d5d5f39dc65c4a04b2 -->
-
-<!-- START_01e62b608aeeb820acce1781f1a89a7c -->
-## Update the specified election resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/elections/{election}" \
--H "Accept: application/json" \
-    -d "id"="84118" \
-    -d "name"="quos" \
-    -d "year"="84118" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/elections/{election}",
-    "method": "PUT",
-    "data": {
-        "id": 84118,
-        "name": "quos",
-        "year": 84118
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/elections/{election}`
-
-`PATCH api/v1/elections/{election}`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  required  | Valid election id
-    name | string |  optional  | 
-    year | integer |  optional  | 
-
-<!-- END_01e62b608aeeb820acce1781f1a89a7c -->
-
-<!-- START_6dab54668f41baed4cfc659363909795 -->
-## Remove the specified election resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/elections/{election}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/elections/{election}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/elections/{election}`
-
-
-<!-- END_6dab54668f41baed4cfc659363909795 -->
+<!-- END_974114326a84e3e47c4f2f0e5aa2bfad -->
 
 #ElectionType
 
 ElectionType CRUD Resource and ...
-<!-- START_b8d43bc8a867e0cf9acfaf6375fa4da5 -->
+<!-- START_f5ebe33c98725bfda6f17536790d9209 -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/election-types" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/election-types" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types",
+    "url": "http://localhost/api/v2/election-types",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1087,128 +454,50 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/election-types?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 3,
+            "name": "General Election"
+        },
+        {
+            "id": 4,
+            "name": "Primary Election"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/election-types?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/election-types?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/election-types?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/election-types",
+    "path": "http:\/\/localhost\/api\/v2\/election-types",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }
 ```
 
 ### HTTP Request
-`GET api/v1/election-types`
+`GET api/v2/election-types`
 
 
-<!-- END_b8d43bc8a867e0cf9acfaf6375fa4da5 -->
+<!-- END_f5ebe33c98725bfda6f17536790d9209 -->
 
-<!-- START_9b8f8ada932650ea7113cf358c6bbb3e -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/election-types/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/election-types/create`
-
-
-<!-- END_9b8f8ada932650ea7113cf358c6bbb3e -->
-
-<!-- START_d69d024dd5e929df8bc8d6c442c4d2a8 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/election-types" \
--H "Accept: application/json" \
-    -d "candidate_id"="perspiciatis" \
-    -d "levels"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "notes"="perspiciatis" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types",
-    "method": "POST",
-    "data": {
-        "candidate_id": "perspiciatis",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "perspiciatis"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/election-types`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    candidate_id | string |  required  | 
-    levels | string |  optional  | Must be a valid JSON string.
-    notes | string |  optional  | 
-
-<!-- END_d69d024dd5e929df8bc8d6c442c4d2a8 -->
-
-<!-- START_c762b5ccd540defc8f4e5df508ede344 -->
+<!-- START_e3f5ebc940f9832def5e8632a27533e7 -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/election-types/{election_type}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/election-types/{election_type}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types/{election_type}",
+    "url": "http://localhost/api/v2/election-types/{election_type}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1227,135 +516,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/election-types/{election_type}`
+`GET api/v2/election-types/{election_type}`
 
 
-<!-- END_c762b5ccd540defc8f4e5df508ede344 -->
-
-<!-- START_8e228a000ba9db71be80f8690498466a -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/election-types/{election_type}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types/{election_type}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/election-types/{election_type}/edit`
-
-
-<!-- END_8e228a000ba9db71be80f8690498466a -->
-
-<!-- START_7bccbecfb298e46fcef8d7a13d60ffaa -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/election-types/{election_type}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types/{election_type}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/election-types/{election_type}`
-
-`PATCH api/v1/election-types/{election_type}`
-
-
-<!-- END_7bccbecfb298e46fcef8d7a13d60ffaa -->
-
-<!-- START_cdf9a4f6e541c83a1a8c85023ca97f45 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/election-types/{election_type}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/election-types/{election_type}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/election-types/{election_type}`
-
-
-<!-- END_cdf9a4f6e541c83a1a8c85023ca97f45 -->
+<!-- END_e3f5ebc940f9832def5e8632a27533e7 -->
 
 #Issue
 
 Issue CRUD Resource and ...
-<!-- START_f1adc84d8913bec7ce8a1d13770a5566 -->
+<!-- START_bb464e2c36d52508cb7d0e5057e0b137 -->
 ## Display a listing of the Issue resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/issues" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/issues" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/issues",
+    "url": "http://localhost/api/v2/issues",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1370,117 +553,39 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-[]
-```
-
-### HTTP Request
-`GET api/v1/issues`
-
-
-<!-- END_f1adc84d8913bec7ce8a1d13770a5566 -->
-
-<!-- START_e2c17327bfc79e50094255fb9c80194d -->
-## Show the form for creating a new Issue resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/issues/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issues/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
+[
+    {
+        "id": 1,
+        "title": "Economy + inclusive growth",
+        "description": "More Description",
+        "election_id": 1,
+        "created_at": "2018-11-02 09:15:05",
+        "updated_at": "2018-11-02 09:15:05"
     }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
+]
 ```
 
 ### HTTP Request
-`GET api/v1/issues/create`
+`GET api/v2/issues`
 
 
-<!-- END_e2c17327bfc79e50094255fb9c80194d -->
+<!-- END_bb464e2c36d52508cb7d0e5057e0b137 -->
 
-<!-- START_0da248661f746ebebddda65e36e3cffc -->
-## Store a newly created Issue resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/issues" \
--H "Accept: application/json" \
-    -d "title"="sed" \
-    -d "description"="sed" \
-    -d "election_id"="sed" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issues",
-    "method": "POST",
-    "data": {
-        "title": "sed",
-        "description": "sed",
-        "election_id": "sed"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/issues`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    title | string |  required  | Maximum: `225`
-    description | string |  optional  | 
-    election_id | string |  required  | Valid election election_id
-
-<!-- END_0da248661f746ebebddda65e36e3cffc -->
-
-<!-- START_9358d4fd6cc4fe35fde4b816506da9b1 -->
+<!-- START_f3fb293673f07c874bf475272972af20 -->
 ## Display the specified Issue resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/issues/{issue}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/issues/{issue}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/issues/{issue}",
+    "url": "http://localhost/api/v2/issues/{issue}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1499,154 +604,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/issues/{issue}`
+`GET api/v2/issues/{issue}`
 
 
-<!-- END_9358d4fd6cc4fe35fde4b816506da9b1 -->
-
-<!-- START_0e09e3b1cf8b44e5366c6ed1f4bb0f87 -->
-## Show the form for editing the specified Issue resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/issues/{issue}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issues/{issue}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/issues/{issue}/edit`
-
-
-<!-- END_0e09e3b1cf8b44e5366c6ed1f4bb0f87 -->
-
-<!-- START_c2d860897e39e888ec9725c44fd1aa1c -->
-## Update the specified Issue resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/issues/{issue}" \
--H "Accept: application/json" \
-    -d "id"="63" \
-    -d "title"="eos" \
-    -d "description"="eos" \
-    -d "election_id"="eos" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issues/{issue}",
-    "method": "PUT",
-    "data": {
-        "id": 63,
-        "title": "eos",
-        "description": "eos",
-        "election_id": "eos"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/issues/{issue}`
-
-`PATCH api/v1/issues/{issue}`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  required  | 
-    title | string |  optional  | Maximum: `225`
-    description | string |  optional  | 
-    election_id | string |  required  | Valid election election_id
-
-<!-- END_c2d860897e39e888ec9725c44fd1aa1c -->
-
-<!-- START_9127185b87682f8ff0064fac1272a80c -->
-## Remove the specified Issue resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/issues/{issue}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issues/{issue}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/issues/{issue}`
-
-
-<!-- END_9127185b87682f8ff0064fac1272a80c -->
+<!-- END_f3fb293673f07c874bf475272972af20 -->
 
 #IssuePosition
 
 IssuePosition CRUD Resource and ...
-<!-- START_89630927e77f061f6fcdf69ac8a8f377 -->
+<!-- START_36cd17a426c1cc0f13c45eba0407c7b1 -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/issuePositions" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/issuePositions" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions",
+    "url": "http://localhost/api/v2/issuePositions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1663,112 +643,54 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/issuePositions?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "issue_id": 1,
+            "candidate_id": 5,
+            "title": "MY position on this issue",
+            "body": "<div><em>“Our economy has witnessed serious macroeconomic distortions and dislocations over the years. Spiraling inflation, unemployment, gross capacity under-utilization in our industries, and the over-dependence on oil revenues have remained with us for a very long time now. To address these central problems which underline other economic difficulties we covenant to diversity the National Economy by encouraging development in non-petroleum producing sectors in order to reduce dependence on oil a main source of our National income as follows:&nbsp;<\/em><\/div><div><em>&nbsp;Increase efficiency and productivity in agriculture, mining, and manufacturing sector.&nbsp;<\/em><\/div><div><em>Embark on gas development, conversion and utilization programmes.&nbsp;<\/em><\/div><div><em>Promote exports through various incentives. Support massive applied scientific research and development for production of necessary goods for economic emancipation.&nbsp;<\/em><\/div><div><em>Encourage the establishment and development of ‘small medium scale enterprises as engines of; economic growth.<\/em><\/div><div><em>Create a suitable environment for foreign investment to flow into the, country.&nbsp;<\/em><\/div><div><em>Strengthen the Naira so that it may freely find its true value in the international currency market.&nbsp;<\/em><\/div><div><em>Formulate and implement disciplined, budget, fiscal and monetary policies.<\/em><\/div><div><em>Work assiduously, to eradicate corruption, fraud, embezzlement and the so-called “Nigerian Way” and to enthrone a new culture of integrity, Transparency and Accountability.&nbsp;<\/em><\/div><ul><li><em>Put the organized private sector into more confidence so that they can be genuinely involved in the revamping and management of the national economy.&nbsp;<\/em><\/li><\/ul><div><em>Turn the abundant arable land of this country to be the food basket of Africa and oven the world.<\/em><\/div><div><em>Encourage industrialists to develop local substitutes for important raw materials and to use the raw materials front put enhanced agricultural production the catalyst for our industrial revolution.<\/em><\/div><div><em>Cut out waste in public finance.<\/em><\/div><div><em>Set out targets for growth rates in the economic.&nbsp;<\/em><\/div><div><em>Enlist the interest of labour unions in all activities so that peaceful relations can be created in the country.<\/em><\/div><div><em>Put in place an energy policy that will ensure efficient exploitation, distribution and&nbsp;<\/em><\/div><div><br><br><\/div>",
+            "audio": null,
+            "infographic": null,
+            "sources": "{\"source_link\":null}",
+            "created_at": "2018-11-02 09:16:53",
+            "updated_at": "2018-11-02 09:16:53"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/issuePositions?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/issuePositions?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/issuePositions?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/issuePositions",
+    "path": "http:\/\/localhost\/api\/v2\/issuePositions",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }
 ```
 
 ### HTTP Request
-`GET api/v1/issuePositions`
+`GET api/v2/issuePositions`
 
 
-<!-- END_89630927e77f061f6fcdf69ac8a8f377 -->
+<!-- END_36cd17a426c1cc0f13c45eba0407c7b1 -->
 
-<!-- START_b53d2f1b80961bf3ac23d35f55dfc22c -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/issuePositions/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/issuePositions/create`
-
-
-<!-- END_b53d2f1b80961bf3ac23d35f55dfc22c -->
-
-<!-- START_38cf2aacafba1eba5bf7102abe4e4fc6 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/issuePositions" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/issuePositions`
-
-
-<!-- END_38cf2aacafba1eba5bf7102abe4e4fc6 -->
-
-<!-- START_666147ef084151277a143a62fda6d044 -->
+<!-- START_d455ebadcf02d7dbbf3c580b81ea406c -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/issuePositions/{issuePosition}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions/{issuePosition}",
+    "url": "http://localhost/api/v2/issuePositions/{issuePosition}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1787,135 +709,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/issuePositions/{issuePosition}`
+`GET api/v2/issuePositions/{issuePosition}`
 
 
-<!-- END_666147ef084151277a143a62fda6d044 -->
-
-<!-- START_0e371a655588212590a7aafda3f38d1a -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/issuePositions/{issuePosition}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions/{issuePosition}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/issuePositions/{issuePosition}/edit`
-
-
-<!-- END_0e371a655588212590a7aafda3f38d1a -->
-
-<!-- START_424fc72bdb1d20febe2f3452fd43911f -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions/{issuePosition}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/issuePositions/{issuePosition}`
-
-`PATCH api/v1/issuePositions/{issuePosition}`
-
-
-<!-- END_424fc72bdb1d20febe2f3452fd43911f -->
-
-<!-- START_86502cc21c955fa84343d2bfe8326aa6 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/issuePositions/{issuePosition}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/issuePositions/{issuePosition}`
-
-
-<!-- END_86502cc21c955fa84343d2bfe8326aa6 -->
+<!-- END_d455ebadcf02d7dbbf3c580b81ea406c -->
 
 #Membership
 
 Membership CRUD Resource and ...
-<!-- START_2d342eface274147fc61616c7631aea3 -->
+<!-- START_31001777264b7e2a5e915b8970b90f88 -->
 ## Display a listing of the Membership resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/memberships" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/memberships" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships",
+    "url": "http://localhost/api/v2/memberships",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1932,112 +748,62 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/memberships?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "politician_id": 1,
+            "political_party_id": 1,
+            "position_id": 2,
+            "start_date": "2018-11-15 00:00:00",
+            "end_date": null,
+            "created_at": "2018-11-01 16:51:45",
+            "updated_at": "2018-11-01 16:51:45"
+        },
+        {
+            "id": 2,
+            "politician_id": 2,
+            "political_party_id": 1,
+            "position_id": 1,
+            "start_date": "2018-11-24 00:00:00",
+            "end_date": null,
+            "created_at": "2018-11-02 07:28:38",
+            "updated_at": "2018-11-02 07:28:38"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/memberships?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/memberships?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/memberships?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/memberships",
+    "path": "http:\/\/localhost\/api\/v2\/memberships",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }
 ```
 
 ### HTTP Request
-`GET api/v1/memberships`
+`GET api/v2/memberships`
 
 
-<!-- END_2d342eface274147fc61616c7631aea3 -->
+<!-- END_31001777264b7e2a5e915b8970b90f88 -->
 
-<!-- START_eab994ee0ed599821452fac8616eb2d2 -->
-## Show the form for creating a new Membership resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/memberships/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/memberships/create`
-
-
-<!-- END_eab994ee0ed599821452fac8616eb2d2 -->
-
-<!-- START_e353a444a3f8e0db7c63f8d97cd46116 -->
-## Store a newly created Membership resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/memberships" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/memberships`
-
-
-<!-- END_e353a444a3f8e0db7c63f8d97cd46116 -->
-
-<!-- START_4f12e514b117014725f58a6abe92411b -->
+<!-- START_dd19c9942865ac53c511261bf3afa0ee -->
 ## Display the specified Membership resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/memberships/{membership}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/memberships/{membership}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships/{membership}",
+    "url": "http://localhost/api/v2/memberships/{membership}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2056,135 +822,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/memberships/{membership}`
+`GET api/v2/memberships/{membership}`
 
 
-<!-- END_4f12e514b117014725f58a6abe92411b -->
-
-<!-- START_0b9ea174acd86a434b8587f3b10f7828 -->
-## Show the form for editing the specified Membership resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/memberships/{membership}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships/{membership}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/memberships/{membership}/edit`
-
-
-<!-- END_0b9ea174acd86a434b8587f3b10f7828 -->
-
-<!-- START_e570c052175c91264019087b5d836007 -->
-## Update the specified Membership resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/memberships/{membership}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships/{membership}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/memberships/{membership}`
-
-`PATCH api/v1/memberships/{membership}`
-
-
-<!-- END_e570c052175c91264019087b5d836007 -->
-
-<!-- START_f92720722d4a7bcebbd68ac33e0c7dab -->
-## Remove the specified Membership resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/memberships/{membership}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/memberships/{membership}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/memberships/{membership}`
-
-
-<!-- END_f92720722d4a7bcebbd68ac33e0c7dab -->
+<!-- END_dd19c9942865ac53c511261bf3afa0ee -->
 
 #Office
 
 Office CRUD Resource and ...
-<!-- START_e0fdf3b324de0a26f7ab2a109561d9f0 -->
+<!-- START_30dd107bce3240f5cf3d1aaf2d67de5b -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/offices" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/offices" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/offices",
+    "url": "http://localhost/api/v2/offices",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2201,112 +861,50 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/offices?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "office_type_id": 2,
+            "name": "President of Nigeria",
+            "meta": "{\"state\":null,\"local_goverment\":null,\"other_information\":null}",
+            "created_at": "2018-11-02 08:18:57",
+            "updated_at": "2018-11-02 08:18:57"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/offices?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/offices?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/offices?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/offices",
+    "path": "http:\/\/localhost\/api\/v2\/offices",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }
 ```
 
 ### HTTP Request
-`GET api/v1/offices`
+`GET api/v2/offices`
 
 
-<!-- END_e0fdf3b324de0a26f7ab2a109561d9f0 -->
+<!-- END_30dd107bce3240f5cf3d1aaf2d67de5b -->
 
-<!-- START_af9f2e25ea13d88666d92af37b3f4398 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/offices/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/offices/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/offices/create`
-
-
-<!-- END_af9f2e25ea13d88666d92af37b3f4398 -->
-
-<!-- START_fd04e03b14de6c9023cc1344dca029a3 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/offices" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/offices",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/offices`
-
-
-<!-- END_fd04e03b14de6c9023cc1344dca029a3 -->
-
-<!-- START_9693401d05dd07994b96340e69e0a736 -->
+<!-- START_e245d680fd971ac9e4f51f5d5172e32e -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/offices/{office}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/offices/{office}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/offices/{office}",
+    "url": "http://localhost/api/v2/offices/{office}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2325,135 +923,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/offices/{office}`
+`GET api/v2/offices/{office}`
 
 
-<!-- END_9693401d05dd07994b96340e69e0a736 -->
-
-<!-- START_97a2a14fd980614a996fc15de4f15346 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/offices/{office}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/offices/{office}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/offices/{office}/edit`
-
-
-<!-- END_97a2a14fd980614a996fc15de4f15346 -->
-
-<!-- START_ff57b906bbf30f24a2e5e8b4e64bd687 -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/offices/{office}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/offices/{office}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/offices/{office}`
-
-`PATCH api/v1/offices/{office}`
-
-
-<!-- END_ff57b906bbf30f24a2e5e8b4e64bd687 -->
-
-<!-- START_7591a33c7aec69f21c94ea8208cca238 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/offices/{office}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/offices/{office}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/offices/{office}`
-
-
-<!-- END_7591a33c7aec69f21c94ea8208cca238 -->
+<!-- END_e245d680fd971ac9e4f51f5d5172e32e -->
 
 #OfficeType
 
 OfficeType CRUD Resource and ...
-<!-- START_e7c2eca9faca13ed73eb481eb271b7b9 -->
+<!-- START_424fbcf5d9d92477ff6456ddccef5375 -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/office-types" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/office-types" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types",
+    "url": "http://localhost/api/v2/office-types",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2470,112 +962,56 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/office-types?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 2,
+            "name": "Presidential Offfice",
+            "description": "office of the president",
+            "created_at": "2018-11-02 08:17:55",
+            "updated_at": "2018-11-02 08:17:55"
+        },
+        {
+            "id": 3,
+            "name": "Governorship Office",
+            "description": "Office of the Governors",
+            "created_at": "2018-11-02 08:18:30",
+            "updated_at": "2018-11-02 08:18:30"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/office-types?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/office-types?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/office-types?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/office-types",
+    "path": "http:\/\/localhost\/api\/v2\/office-types",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }
 ```
 
 ### HTTP Request
-`GET api/v1/office-types`
+`GET api/v2/office-types`
 
 
-<!-- END_e7c2eca9faca13ed73eb481eb271b7b9 -->
+<!-- END_424fbcf5d9d92477ff6456ddccef5375 -->
 
-<!-- START_026dad414377f712ad72be4fb588c2f4 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/office-types/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/office-types/create`
-
-
-<!-- END_026dad414377f712ad72be4fb588c2f4 -->
-
-<!-- START_42816a1bfbf8d5d18dcd4b552125415c -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/office-types" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/office-types`
-
-
-<!-- END_42816a1bfbf8d5d18dcd4b552125415c -->
-
-<!-- START_9af253477de08bae38b0e40a598b4905 -->
+<!-- START_1915c4f14f706caa7a183eca839306ee -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/office-types/{office_type}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/office-types/{office_type}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types/{office_type}",
+    "url": "http://localhost/api/v2/office-types/{office_type}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2594,135 +1030,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/office-types/{office_type}`
+`GET api/v2/office-types/{office_type}`
 
 
-<!-- END_9af253477de08bae38b0e40a598b4905 -->
-
-<!-- START_71a9bb686096762ec033e63b45dfc516 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/office-types/{office_type}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types/{office_type}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/office-types/{office_type}/edit`
-
-
-<!-- END_71a9bb686096762ec033e63b45dfc516 -->
-
-<!-- START_198dc3187e6c4dca4ecd1bc7b22e397a -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/office-types/{office_type}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types/{office_type}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/office-types/{office_type}`
-
-`PATCH api/v1/office-types/{office_type}`
-
-
-<!-- END_198dc3187e6c4dca4ecd1bc7b22e397a -->
-
-<!-- START_236b228ce7a0f9fec59cc03adc16a4a3 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/office-types/{office_type}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/office-types/{office_type}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/office-types/{office_type}`
-
-
-<!-- END_236b228ce7a0f9fec59cc03adc16a4a3 -->
+<!-- END_1915c4f14f706caa7a183eca839306ee -->
 
 #Politician
 
 Politician CRUD Resource and ...
-<!-- START_fc7fb7e2ec5f70bb12fb7408ef7db5d2 -->
+<!-- START_bde99f77b5455a62e1dacc20eb89b1dd -->
 ## Display a listing of the Politician resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/politicians" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/politicians" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians",
+    "url": "http://localhost/api/v2/politicians",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2739,161 +1069,117 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/politicians?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "title": "Mr",
+            "name": "Okanlawon Emmanuel",
+            "other_names": "{\"name\":\"ayodele\",\"start_date\":null,\"end_date\":null,\"note\":null}",
+            "email": "okanlawonemmanuel41@gmail.com",
+            "gender": "Okanlawon Emmanuel",
+            "birth_date": "2018-11-28 00:00:00",
+            "death_date": "2018-11-07 00:00:00",
+            "image": "JmCGiyeQHtWzyJ97mwuYsyEZVtcB9PQQoxabDR9j.jpeg",
+            "cover_image": "25lcoL3cOXMR0NjjXp5FL2LSrmhTDjywDPx6xVws.jpeg",
+            "summary": "this is a summary",
+            "biography": "<div>okanlawon emmanuel<\/div>",
+            "national_identity": "Nigerian",
+            "contact_details": "{\"contact_detail_1\":\"Contact Detail 1\",\"contact_detail_2\":\"Contact Detail 2\"}",
+            "links": "{\"website\":\"www.facebook.com\",\"social\":null}",
+            "created_at": "2018-11-01 15:33:02",
+            "updated_at": "2018-11-01 15:38:06",
+            "candidates": [],
+            "memberships": [
+                {
+                    "id": 1,
+                    "politician_id": 1,
+                    "political_party_id": 1,
+                    "position_id": 2,
+                    "start_date": "2018-11-15 00:00:00",
+                    "end_date": null,
+                    "created_at": "2018-11-01 16:51:45",
+                    "updated_at": "2018-11-01 16:51:45"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Mr",
+            "name": "Faith Kalu",
+            "other_names": "{\"name\":\"Isick\",\"start_date\":null,\"end_date\":null,\"note\":null}",
+            "email": "obigtechnologies@gmail.com",
+            "gender": "Male",
+            "birth_date": "2018-11-22 00:00:00",
+            "death_date": "2018-11-23 00:00:00",
+            "image": "4h0GuiirdJMRNCfTGXXjylmV6qo0cUD5GSiqnEI2.png",
+            "cover_image": "C5gTf9znuUjoWQQw99jD52pLo4wKgOOMkLgc0iuo.jpeg",
+            "summary": "This is another Politician",
+            "biography": "<div>This is another Politician biography<\/div>",
+            "national_identity": "Nigerian",
+            "contact_details": "{\"contact_detail_1\":\"Contact Detail 1\",\"contact_detail_2\":\"ontact Detail 2\"}",
+            "links": "{\"website\":null,\"social-media\":null}",
+            "created_at": "2018-11-02 07:28:16",
+            "updated_at": "2018-11-02 07:28:16",
+            "candidates": [
+                {
+                    "id": 5,
+                    "election_id": 1,
+                    "election_type_id": 3,
+                    "office_id": 1,
+                    "membership_id": 2,
+                    "created_at": "2018-11-02 08:28:46",
+                    "updated_at": "2018-11-02 08:28:46",
+                    "politician_id": 2
+                }
+            ],
+            "memberships": [
+                {
+                    "id": 2,
+                    "politician_id": 2,
+                    "political_party_id": 1,
+                    "position_id": 1,
+                    "start_date": "2018-11-24 00:00:00",
+                    "end_date": null,
+                    "created_at": "2018-11-02 07:28:38",
+                    "updated_at": "2018-11-02 07:28:38"
+                }
+            ]
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/politicians?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/politicians?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/politicians?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/politicians",
+    "path": "http:\/\/localhost\/api\/v2\/politicians",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }
 ```
 
 ### HTTP Request
-`GET api/v1/politicians`
+`GET api/v2/politicians`
 
 
-<!-- END_fc7fb7e2ec5f70bb12fb7408ef7db5d2 -->
+<!-- END_bde99f77b5455a62e1dacc20eb89b1dd -->
 
-<!-- START_d5bed3305524cabd9078fd6c9c0a53a2 -->
-## Show the form for creating a new Politician resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/politicians/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/politicians/create`
-
-
-<!-- END_d5bed3305524cabd9078fd6c9c0a53a2 -->
-
-<!-- START_62953582be5e1229b7449c3251bc376b -->
-## Store a newly created Politician resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/politicians" \
--H "Accept: application/json" \
-    -d "title"="quia" \
-    -d "name"="quia" \
-    -d "other_names"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "email"="hessel.claire@example.com" \
-    -d "gender"="male" \
-    -d "birth-date"="1976-01-26" \
-    -d "death-date"="1976-01-26" \
-    -d "image"="http://hessel.com/" \
-    -d "cover-image"="http://hessel.com/" \
-    -d "summary"="quia" \
-    -d "biography"="quia" \
-    -d "national_identity"="quia" \
-    -d "contact_details"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-    -d "links"="[&quot;foo&quot;,&quot;bar&quot;,&quot;baz&quot;]" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians",
-    "method": "POST",
-    "data": {
-        "title": "quia",
-        "name": "quia",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "hessel.claire@example.com",
-        "gender": "male",
-        "birth-date": "1976-01-26",
-        "death-date": "1976-01-26",
-        "image": "http:\/\/hessel.com\/",
-        "cover-image": "http:\/\/hessel.com\/",
-        "summary": "quia",
-        "biography": "quia",
-        "national_identity": "quia",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]",
-        "links": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/politicians`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    title | string |  required  | Maximum: `25`
-    name | string |  required  | Maximum: `25`
-    other_names | string |  optional  | Must be a valid JSON string.
-    email | email |  required  | 
-    gender | string |  required  | `male` or `female`
-    birth-date | date |  optional  | 
-    death-date | date |  optional  | 
-    image | url |  optional  | 
-    cover-image | url |  optional  | 
-    summary | string |  optional  | 
-    biography | string |  optional  | 
-    national_identity | string |  optional  | 
-    contact_details | string |  optional  | Must be a valid JSON string.
-    links | string |  optional  | Must be a valid JSON string.
-
-<!-- END_62953582be5e1229b7449c3251bc376b -->
-
-<!-- START_b01589c790008dac98af6119817dc217 -->
+<!-- START_92c3c96ec46f0cf250f3794ced81f6ba -->
 ## Display the specified Politician resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/politicians/{politician}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/politicians/{politician}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians/{politician}",
+    "url": "http://localhost/api/v2/politicians/{politician}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2912,135 +1198,29 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/politicians/{politician}`
+`GET api/v2/politicians/{politician}`
 
 
-<!-- END_b01589c790008dac98af6119817dc217 -->
-
-<!-- START_64940f1520e6fb42c8f27702dd6442a0 -->
-## Show the form for editing the specified Politician resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/politicians/{politician}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians/{politician}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/politicians/{politician}/edit`
-
-
-<!-- END_64940f1520e6fb42c8f27702dd6442a0 -->
-
-<!-- START_415f1426227981a109e7ae15839d0374 -->
-## Update the specified Politician resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/politicians/{politician}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians/{politician}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/politicians/{politician}`
-
-`PATCH api/v1/politicians/{politician}`
-
-
-<!-- END_415f1426227981a109e7ae15839d0374 -->
-
-<!-- START_9f8ca189b8e710a661a8dba53f9a9575 -->
-## Remove the specified Politician resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/politicians/{politician}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/politicians/{politician}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/politicians/{politician}`
-
-
-<!-- END_9f8ca189b8e710a661a8dba53f9a9575 -->
+<!-- END_92c3c96ec46f0cf250f3794ced81f6ba -->
 
 #Position
 
 Position CRUD Resource and ...
-<!-- START_6caa5bf56397ec8b3e3f066edf54d9ac -->
+<!-- START_fd1df2fcd43f75d8e4ab6e54f1e55454 -->
 ## Display a listing of the resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/positions" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/positions" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/positions",
+    "url": "http://localhost/api/v2/positions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -3057,128 +1237,56 @@ $.ajax(settings).done(function (response) {
 ```json
 {
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/positions?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "position": "Member",
+            "role_description": "A member of a Party",
+            "created_at": "2018-11-01 16:48:13",
+            "updated_at": "2018-11-01 16:48:13"
+        },
+        {
+            "id": 2,
+            "position": "Chairman",
+            "role_description": "Chairman of the Party",
+            "created_at": "2018-11-01 16:48:44",
+            "updated_at": "2018-11-01 16:48:44"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/positions?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/positions?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/positions?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/positions",
+    "path": "http:\/\/localhost\/api\/v2\/positions",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }
 ```
 
 ### HTTP Request
-`GET api/v1/positions`
+`GET api/v2/positions`
 
 
-<!-- END_6caa5bf56397ec8b3e3f066edf54d9ac -->
+<!-- END_fd1df2fcd43f75d8e4ab6e54f1e55454 -->
 
-<!-- START_371289ff51ce1b9934f3dcec5f9ea97a -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/positions/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/positions/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/positions/create`
-
-
-<!-- END_371289ff51ce1b9934f3dcec5f9ea97a -->
-
-<!-- START_9a521774646247b1e29363355b3410b9 -->
-## Store a newly created resource in storage.
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/positions" \
--H "Accept: application/json" \
-    -d "role"="id" \
-    -d "political_party_id"="id" \
-    -d "position"="id" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/positions",
-    "method": "POST",
-    "data": {
-        "role": "id",
-        "political_party_id": "id",
-        "position": "id"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/positions`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    role | string |  optional  | 
-    political_party_id | string |  required  | 
-    position | string |  required  | 
-
-<!-- END_9a521774646247b1e29363355b3410b9 -->
-
-<!-- START_a624cd1ace79089cd1da7bea75fd8cf2 -->
+<!-- START_ff6718600b3d1c16140813fe374e8be9 -->
 ## Display the specified resource.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/v1/positions/{position}" \
--H "Accept: application/json"
+curl -X GET -G "http://localhost/api/v2/positions/{position}" \
+    -H "Accept: application/json"
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/v1/positions/{position}",
+    "url": "http://localhost/api/v2/positions/{position}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -3197,279 +1305,9 @@ $.ajax(settings).done(function (response) {
 ```
 
 ### HTTP Request
-`GET api/v1/positions/{position}`
+`GET api/v2/positions/{position}`
 
 
-<!-- END_a624cd1ace79089cd1da7bea75fd8cf2 -->
+<!-- END_ff6718600b3d1c16140813fe374e8be9 -->
 
-<!-- START_0bbaed13d8e7cb3c761344bd3228c051 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "http://localhost/api/v1/positions/{position}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/positions/{position}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`GET api/v1/positions/{position}/edit`
-
-
-<!-- END_0bbaed13d8e7cb3c761344bd3228c051 -->
-
-<!-- START_912c914c317a2a1924f07de84914becd -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "http://localhost/api/v1/positions/{position}" \
--H "Accept: application/json" \
-    -d "id"="91867" \
-    -d "role"="qui" \
-    -d "political_party_id"="qui" \
-    -d "position"="qui" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/positions/{position}",
-    "method": "PUT",
-    "data": {
-        "id": 91867,
-        "role": "qui",
-        "political_party_id": "qui",
-        "position": "qui"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/positions/{position}`
-
-`PATCH api/v1/positions/{position}`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  optional  | 
-    role | string |  optional  | 
-    political_party_id | string |  required  | 
-    position | string |  required  | 
-
-<!-- END_912c914c317a2a1924f07de84914becd -->
-
-<!-- START_d79eb75a14cd5d294d386c60a99c0889 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "http://localhost/api/v1/positions/{position}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/positions/{position}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/positions/{position}`
-
-
-<!-- END_d79eb75a14cd5d294d386c60a99c0889 -->
-
-#User
-
-User Resource Login, Register, Details etc
-<!-- START_8c0e48cd8efa861b308fc45872ff0837 -->
-## Login endpoint
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/login" \
--H "Accept: application/json" \
-    -d "email"="harmon85@example.com" \
-    -d "password"="dolorum" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/login",
-    "method": "POST",
-    "data": {
-        "email": "harmon85@example.com",
-        "password": "dolorum"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/login`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    email | email |  required  | 
-    password | string |  required  | 
-
-<!-- END_8c0e48cd8efa861b308fc45872ff0837 -->
-
-<!-- START_8ae5d428da27b2b014dc767c2f19a813 -->
-## Register endpoint
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/register" \
--H "Accept: application/json" \
-    -d "id"="95552243" \
-    -d "first_name"="dolor" \
-    -d "last_name"="dolor" \
-    -d "email"="mwilkinson@example.com" \
-    -d "password"="dolor" \
-    -d "c_password"="dolor" \
-    -d "username"="dolor" \
-    -d "phone_number"="dolor" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/register",
-    "method": "POST",
-    "data": {
-        "id": 95552243,
-        "first_name": "dolor",
-        "last_name": "dolor",
-        "email": "mwilkinson@example.com",
-        "password": "dolor",
-        "c_password": "dolor",
-        "username": "dolor",
-        "phone_number": "dolor"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/register`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    id | integer |  required  | 
-    first_name | string |  required  | 
-    last_name | string |  required  | 
-    email | email |  required  | 
-    password | string |  required  | 
-    c_password | string |  required  | Must be the same as `password`
-    username | string |  optional  | Maximum: `255`
-    phone_number | string |  optional  | 
-
-<!-- END_8ae5d428da27b2b014dc767c2f19a813 -->
-
-<!-- START_7d037587811c04093c923c7db7411aba -->
-## Details endpoint
-
-> Example request:
-
-```bash
-curl -X POST "http://localhost/api/v1/details" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://localhost/api/v1/details",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/details`
-
-
-<!-- END_7d037587811c04093c923c7db7411aba -->
 

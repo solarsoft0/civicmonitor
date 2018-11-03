@@ -83,15 +83,24 @@ JSON::make('Contact Details', [
                     Textarea::make('Contact Detail 2'),
             ])->hideFromIndex(),
         JSON::make('Links', [
-                    Textarea::make('Website')->help(
+                    Textarea::make("Websites",'Website')->help(
     'seperate with comma "," '
 ),
-                   Textarea::make('Social Media')->help(
-    'seperate with comma "," '
+                   Textarea::make('Facebook')->help(
+    'enter full url "," '
+),
+                   Textarea::make('Twitter')->help(
+    'enter full url "," '
+),
+                   Textarea::make('Instagram')->help(
+    'enter full url "," '
+),
+                   Textarea::make('Youtube')->help(
+    'enter full url "," '
 ),
                ])->hideFromIndex(), 
                            Textarea::make("Honors")->hideFromIndex(),
-            Textarea::make("Works")->hideFromIndex(),
+            Textarea::make("Work Experience","works")->hideFromIndex(),
             Textarea::make("Family")->hideFromIndex(),
                     new Panel('Education', $this->educationFields()),
 

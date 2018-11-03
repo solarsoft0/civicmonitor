@@ -40,7 +40,7 @@ class Membership extends Resource
 
     public function title()
 {
-    return $this->id .". Politician Name ". $this->politician->name;
+    return $this->id ." ". $this->politician->name;
 }
 
 public function subtitle()

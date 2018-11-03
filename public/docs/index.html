@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -11,57 +10,57 @@
     <script src="js/all.js"></script>
 
 
-    <script>
-        $(function () {
-            setupLanguages(["bash", "javascript"]);
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
         });
-    </script>
-</head>
+      </script>
+      </head>
 
-<body class="">
+  <body class="">
     <a href="#" id="nav-button">
-        <span>
-            NAV
-            <img src="images/navbar.png" />
-        </span>
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
     </a>
     <div class="tocify-wrapper">
         <img src="images/logo.png" />
-        <div class="lang-selector">
-            <a href="#" data-language-name="bash">bash</a>
-            <a href="#" data-language-name="javascript">javascript</a>
-        </div>
-        <div class="search">
-            <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
-        <div id="toc">
-        </div>
-        <ul class="toc-footer">
-            <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
-        </ul>
-    </div>
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
     <div class="page-wrapper">
-        <div class="dark-box"></div>
-        <div class="content">
-            <!-- START_INFO -->
-            <h1>Info</h1>
-            <p>Welcome to the generated API reference.
-                <a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
-            <!-- END_INFO -->
-            <h1>Candidate</h1>
-            <p>Candidate CRUD Resource and ...</p>
-            <!-- START_05121932cfd6ab1b8b1fe5c77dada25b -->
-            <h2>Get a Candidate Issue Positions.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/issue-positions" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>Candidate</h1>
+<p>Candidate CRUD Resource and ...</p>
+<!-- START_9c68d1ebd8a35a27bacb5d2394a90d04 -->
+<h2>Get a Candidate Issue Positions.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/candidates/{candidate}/issue-positions" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/issue-positions",
+    "url": "http://localhost/api/v2/candidates/{candidate}/issue-positions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -71,24 +70,56 @@
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates/{candidate}/issue-positions</code></p>
-            <!-- END_05121932cfd6ab1b8b1fe5c77dada25b -->
-            <!-- START_dfad8eb7c654a25286d673249cd8e8e3 -->
-            <h2>Get a Candidate Political Parties.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/candidate-political-parties" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[
+    {
+        "id": 5,
+        "election_id": 1,
+        "election_type_id": 3,
+        "office_id": 1,
+        "membership_id": 2,
+        "created_at": "2018-11-02 08:28:46",
+        "updated_at": "2018-11-02 08:28:46",
+        "issue_positions": [
+            {
+                "id": 1,
+                "issue_id": 1,
+                "candidate_id": 5,
+                "title": "MY position on this issue",
+                "body": "&lt;div&gt;&lt;em&gt;“Our economy has witnessed serious macroeconomic distortions and dislocations over the years. Spiraling inflation, unemployment, gross capacity under-utilization in our industries, and the over-dependence on oil revenues have remained with us for a very long time now. To address these central problems which underline other economic difficulties we covenant to diversity the National Economy by encouraging development in non-petroleum producing sectors in order to reduce dependence on oil a main source of our National income as follows:&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;&amp;nbsp;Increase efficiency and productivity in agriculture, mining, and manufacturing sector.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Embark on gas development, conversion and utilization programmes.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Promote exports through various incentives. Support massive applied scientific research and development for production of necessary goods for economic emancipation.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Encourage the establishment and development of ‘small medium scale enterprises as engines of; economic growth.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Create a suitable environment for foreign investment to flow into the, country.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Strengthen the Naira so that it may freely find its true value in the international currency market.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Formulate and implement disciplined, budget, fiscal and monetary policies.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Work assiduously, to eradicate corruption, fraud, embezzlement and the so-called “Nigerian Way” and to enthrone a new culture of integrity, Transparency and Accountability.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;ul&gt;&lt;li&gt;&lt;em&gt;Put the organized private sector into more confidence so that they can be genuinely involved in the revamping and management of the national economy.&amp;nbsp;&lt;\/em&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;div&gt;&lt;em&gt;Turn the abundant arable land of this country to be the food basket of Africa and oven the world.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Encourage industrialists to develop local substitutes for important raw materials and to use the raw materials front put enhanced agricultural production the catalyst for our industrial revolution.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Cut out waste in public finance.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Set out targets for growth rates in the economic.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Enlist the interest of labour unions in all activities so that peaceful relations can be created in the country.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Put in place an energy policy that will ensure efficient exploitation, distribution and&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;br&gt;&lt;\/div&gt;",
+                "audio": null,
+                "infographic": null,
+                "sources": "{\"source_link\":null}",
+                "created_at": "2018-11-02 09:16:53",
+                "updated_at": "2018-11-02 09:16:53",
+                "issue": {
+                    "id": 1,
+                    "title": "Economy + inclusive growth",
+                    "description": "More Description",
+                    "election_id": 1,
+                    "created_at": "2018-11-02 09:15:05",
+                    "updated_at": "2018-11-02 09:15:05"
+                }
+            }
+        ]
+    }
+]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/candidates/{candidate}/issue-positions</code></p>
+<!-- END_9c68d1ebd8a35a27bacb5d2394a90d04 -->
+<!-- START_cf2ff0457f9e9033cd4b4cfe645a18a9 -->
+<h2>Get a Candidate Political Parties.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/candidates/{candidate}/political-parties" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/candidate-political-parties",
+    "url": "http://localhost/api/v2/candidates/{candidate}/political-parties",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -98,24 +129,33 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates/{candidate}/candidate-political-parties</code></p>
-            <!-- END_dfad8eb7c654a25286d673249cd8e8e3 -->
-            <!-- START_2f3598170f8b5efb6cf46e706023421e -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "id": 1,
+    "name": "All Progressives Congress",
+    "description": "The All Progressives Congress is a political party in Nigeria, formed on 6 February 2013 in anticipation of the 2015 elections.",
+    "acronym": "APC",
+    "logo": "lZoBTYud5VqjBxYQNkPR8a1zti1ysZTTNFUGVLta.jpeg",
+    "founded_date": "2013-02-06 00:00:00",
+    "created_at": "2018-11-01 15:49:27",
+    "updated_at": "2018-11-01 15:49:27"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/candidates/{candidate}/political-parties</code></p>
+<!-- END_cf2ff0457f9e9033cd4b4cfe645a18a9 -->
+<!-- START_ebf67d75cab0b506c333d4e3de7075d6 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/candidates" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates",
+    "url": "http://localhost/api/v2/candidates",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -125,41 +165,51 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
-    "data": [],
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 5,
+            "election_id": 1,
+            "election_type_id": 3,
+            "office_id": 1,
+            "membership_id": 2,
+            "created_at": "2018-11-02 08:28:46",
+            "updated_at": "2018-11-02 08:28:46"
+        }
+    ],
     "links": {
-        "first": "http:\/\/localhost\/api\/v1\/candidates?page=1",
-        "last": "http:\/\/localhost\/api\/v1\/candidates?page=1",
+        "first": "http:\/\/localhost\/api\/v2\/candidates?page=1",
+        "last": "http:\/\/localhost\/api\/v2\/candidates?page=1",
         "prev": null,
         "next": null
     },
     "meta": {
         "current_page": 1,
-        "from": null,
+        "from": 1,
         "last_page": 1,
-        "path": "http:\/\/localhost\/api\/v1\/candidates",
+        "path": "http:\/\/localhost\/api\/v2\/candidates",
         "per_page": 15,
-        "to": null,
-        "total": 0
+        "to": 1,
+        "total": 1
     }
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates</code></p>
-            <!-- END_2f3598170f8b5efb6cf46e706023421e -->
-            <!-- START_0e32e1cc10ac16e49906d5715e1030a7 -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/candidates</code></p>
+<!-- END_ebf67d75cab0b506c333d4e3de7075d6 -->
+<!-- START_6e6184fca7716c8d5047fe9e500f12a0 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/candidates/{candidate}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/create",
+    "url": "http://localhost/api/v2/candidates/{candidate}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -169,159 +219,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates/create</code></p>
-            <!-- END_0e32e1cc10ac16e49906d5715e1030a7 -->
-            <!-- START_304ed7287a2bfbfc810349ea6275b088 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/candidates" \
--H "Accept: application/json" \
-    -d "title"="non" \
-    -d "name"="non" \
-    -d "other_names"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "email"="lemke.hailee@example.org" \
-    -d "gender"="non" \
-    -d "birth-date"="1980-04-15" \
-    -d "death-date"="1980-04-15" \
-    -d "image"="non" \
-    -d "cover-image"="non" \
-    -d "summary"="non" \
-    -d "biography"="non" \
-    -d "national_identity"="non" \
-    -d "contact_details"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/candidates/{candidate}</code></p>
+<!-- END_6e6184fca7716c8d5047fe9e500f12a0 -->
+<h1>Education</h1>
+<p>Education CRUD Resource and ...</p>
+<!-- START_b58a47a36f9cee893f2dc9a67c31c1a3 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/educations" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates",
-    "method": "POST",
-    "data": {
-        "title": "non",
-        "name": "non",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "lemke.hailee@example.org",
-        "gender": "non",
-        "birth-date": "1980-04-15",
-        "death-date": "1980-04-15",
-        "image": "non",
-        "cover-image": "non",
-        "summary": "non",
-        "biography": "non",
-        "national_identity": "non",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/candidates</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>title</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Maximum: <code>255</code></td>
-                    </tr>
-                    <tr>
-                        <td>other_names</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>email</td>
-                        <td>email</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>gender</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>birth-date</td>
-                        <td>date</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>death-date</td>
-                        <td>date</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>image</td>
-                        <td>image</td>
-                        <td>optional</td>
-                        <td>Must be an image (jpeg, png, bmp, gif, or svg)</td>
-                    </tr>
-                    <tr>
-                        <td>cover-image</td>
-                        <td>image</td>
-                        <td>optional</td>
-                        <td>Must be an image (jpeg, png, bmp, gif, or svg)</td>
-                    </tr>
-                    <tr>
-                        <td>summary</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>biography</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>national_identity</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>contact_details</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_304ed7287a2bfbfc810349ea6275b088 -->
-            <!-- START_903f3a9aed1d94e6b43e05602db6b266 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}",
+    "url": "http://localhost/api/v2/educations",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -331,24 +248,24 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates/{candidate}</code></p>
-            <!-- END_903f3a9aed1d94e6b43e05602db6b266 -->
-            <!-- START_1d3201b871ec94840e47580e6c0141ff -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/educations</code></p>
+<!-- END_b58a47a36f9cee893f2dc9a67c31c1a3 -->
+<!-- START_53649b5a334694beb186850ee55f760e -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/educations/{education}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}/edit",
+    "url": "http://localhost/api/v2/educations/{education}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -358,192 +275,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/candidates/{candidate}/edit</code></p>
-            <!-- END_1d3201b871ec94840e47580e6c0141ff -->
-            <!-- START_857511df16834453c5feb168f1123d68 -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}" \
--H "Accept: application/json" \
-    -d "id"="32595" \
-    -d "title"="ducimus" \
-    -d "name"="ducimus" \
-    -d "other_names"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "email"="evert.heller@example.net" \
-    -d "gender"="ducimus" \
-    -d "birth-date"="1991-10-23" \
-    -d "death-date"="1991-10-23" \
-    -d "image"="ducimus" \
-    -d "cover-image"="ducimus" \
-    -d "summary"="ducimus" \
-    -d "biography"="ducimus" \
-    -d "national_identity"="ducimus" \
-    -d "contact_details"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/educations/{education}</code></p>
+<!-- END_53649b5a334694beb186850ee55f760e -->
+<h1>Election</h1>
+<p>Election CRUD Resource and ...</p>
+<!-- START_f63aec21faf9cbb1021a8ad6383e9d84 -->
+<h2>Display a listing of the election resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/elections" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}",
-    "method": "PUT",
-    "data": {
-        "id": 32595,
-        "title": "ducimus",
-        "name": "ducimus",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "evert.heller@example.net",
-        "gender": "ducimus",
-        "birth-date": "1991-10-23",
-        "death-date": "1991-10-23",
-        "image": "ducimus",
-        "cover-image": "ducimus",
-        "summary": "ducimus",
-        "biography": "ducimus",
-        "national_identity": "ducimus",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/candidates/{candidate}</code></p>
-            <p><code>PATCH api/v1/candidates/{candidate}</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>title</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Maximum: <code>255</code></td>
-                    </tr>
-                    <tr>
-                        <td>other_names</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>email</td>
-                        <td>email</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>gender</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>birth-date</td>
-                        <td>date</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>death-date</td>
-                        <td>date</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>image</td>
-                        <td>image</td>
-                        <td>optional</td>
-                        <td>Must be an image (jpeg, png, bmp, gif, or svg)</td>
-                    </tr>
-                    <tr>
-                        <td>cover-image</td>
-                        <td>image</td>
-                        <td>optional</td>
-                        <td>Must be an image (jpeg, png, bmp, gif, or svg)</td>
-                    </tr>
-                    <tr>
-                        <td>summary</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>biography</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>national_identity</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>contact_details</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_857511df16834453c5feb168f1123d68 -->
-            <!-- START_82a3956a95e79a8966c28dea82cdbb0e -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/candidates/{candidate}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/candidates/{candidate}</code></p>
-            <!-- END_82a3956a95e79a8966c28dea82cdbb0e -->
-            <h1>Education</h1>
-            <p>Education CRUD Resource and ...</p>
-            <!-- START_4d340187a15b68650e3e26289826e457 -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/educations" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations",
+    "url": "http://localhost/api/v2/elections",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -553,300 +304,43 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/educations</code></p>
-            <!-- END_4d340187a15b68650e3e26289826e457 -->
-            <!-- START_7f455f153ebbacc01b3a0c82c6f57759 -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/educations/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/educations/create</code></p>
-            <!-- END_7f455f153ebbacc01b3a0c82c6f57759 -->
-            <!-- START_0ed5bd2bb39fe562f55dbbf8204e30f5 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/educations" \
--H "Accept: application/json" \
-    -d "candidate_id"="ut" \
-    -d "levels"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "notes"="ut" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations",
-    "method": "POST",
-    "data": {
-        "candidate_id": "ut",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "ut"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/educations</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>candidate_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>levels</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>notes</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_0ed5bd2bb39fe562f55dbbf8204e30f5 -->
-            <!-- START_1c44b52ad94fc0408fcc2c66464a095f -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/educations/{education}</code></p>
-            <!-- END_1c44b52ad94fc0408fcc2c66464a095f -->
-            <!-- START_984ddba61b41203df126cd07b2c2f5a3 -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/educations/{education}/edit</code></p>
-            <!-- END_984ddba61b41203df126cd07b2c2f5a3 -->
-            <!-- START_676e5de39359f34eb23363b340ae837a -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}" \
--H "Accept: application/json" \
-    -d "id"="4907918" \
-    -d "candidate_id"="quod" \
-    -d "levels"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "notes"="quod" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}",
-    "method": "PUT",
-    "data": {
-        "id": 4907918,
-        "candidate_id": "quod",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "quod"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/educations/{education}</code></p>
-            <p><code>PATCH api/v1/educations/{education}</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>candidate_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>levels</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>notes</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_676e5de39359f34eb23363b340ae837a -->
-            <!-- START_fbeaa20d6c471a803b9cc3cd796f346e -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/educations/{education}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/educations/{education}</code></p>
-            <!-- END_fbeaa20d6c471a803b9cc3cd796f346e -->
-            <h1>Election</h1>
-            <p>Election CRUD Resource and ...</p>
-            <!-- START_85b909af8cd46c6a6edb4d0891e74c91 -->
-            <h2>Display a listing of the election resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/elections" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/elections?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "name": "Election 2019",
+            "year": 2019
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/elections?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/elections?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/elections?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/elections",
+    "path": "http:\/\/localhost\/api\/v2\/elections",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/elections</code></p>
-            <!-- END_85b909af8cd46c6a6edb4d0891e74c91 -->
-            <!-- START_887b9f3cdab078eb54a401e3dc6e2337 -->
-            <h2>Show the form for creating a new election resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/elections/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/elections</code></p>
+<!-- END_f63aec21faf9cbb1021a8ad6383e9d84 -->
+<!-- START_974114326a84e3e47c4f2f0e5aa2bfad -->
+<h2>Display the specified election resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/elections/{election}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections/create",
+    "url": "http://localhost/api/v2/elections/{election}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -856,77 +350,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/elections/create</code></p>
-            <!-- END_887b9f3cdab078eb54a401e3dc6e2337 -->
-            <!-- START_21564cbbc3164e7e82a5a873f097b4e2 -->
-            <h2>Store a newly created election resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/elections" \
--H "Accept: application/json" \
-    -d "name"="qui" \
-    -d "year"="96" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/elections/{election}</code></p>
+<!-- END_974114326a84e3e47c4f2f0e5aa2bfad -->
+<h1>ElectionType</h1>
+<p>ElectionType CRUD Resource and ...</p>
+<!-- START_f5ebe33c98725bfda6f17536790d9209 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/election-types" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections",
-    "method": "POST",
-    "data": {
-        "name": "qui",
-        "year": 96
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/elections</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>name</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>year</td>
-                        <td>integer</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_21564cbbc3164e7e82a5a873f097b4e2 -->
-            <!-- START_7104db941574e1f23ab663b92fe02038 -->
-            <h2>Display the specified election resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}",
+    "url": "http://localhost/api/v2/election-types",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -936,178 +379,46 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/elections/{election}</code></p>
-            <!-- END_7104db941574e1f23ab663b92fe02038 -->
-            <!-- START_e0c5aa1843cb22d5d5f39dc65c4a04b2 -->
-            <h2>Show the form for editing the specified election resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/elections/{election}/edit</code></p>
-            <!-- END_e0c5aa1843cb22d5d5f39dc65c4a04b2 -->
-            <!-- START_01e62b608aeeb820acce1781f1a89a7c -->
-            <h2>Update the specified election resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}" \
--H "Accept: application/json" \
-    -d "id"="84118" \
-    -d "name"="quos" \
-    -d "year"="84118" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}",
-    "method": "PUT",
-    "data": {
-        "id": 84118,
-        "name": "quos",
-        "year": 84118
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/elections/{election}</code></p>
-            <p><code>PATCH api/v1/elections/{election}</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>required</td>
-                        <td>Valid election id</td>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>year</td>
-                        <td>integer</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_01e62b608aeeb820acce1781f1a89a7c -->
-            <!-- START_6dab54668f41baed4cfc659363909795 -->
-            <h2>Remove the specified election resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/elections/{election}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/elections/{election}</code></p>
-            <!-- END_6dab54668f41baed4cfc659363909795 -->
-            <h1>ElectionType</h1>
-            <p>ElectionType CRUD Resource and ...</p>
-            <!-- START_b8d43bc8a867e0cf9acfaf6375fa4da5 -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/election-types" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/election-types?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 3,
+            "name": "General Election"
+        },
+        {
+            "id": 4,
+            "name": "Primary Election"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/election-types?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/election-types?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/election-types?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/election-types",
+    "path": "http:\/\/localhost\/api\/v2\/election-types",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/election-types</code></p>
-            <!-- END_b8d43bc8a867e0cf9acfaf6375fa4da5 -->
-            <!-- START_9b8f8ada932650ea7113cf358c6bbb3e -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/election-types/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/election-types</code></p>
+<!-- END_f5ebe33c98725bfda6f17536790d9209 -->
+<!-- START_e3f5ebc940f9832def5e8632a27533e7 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/election-types/{election_type}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types/create",
+    "url": "http://localhost/api/v2/election-types/{election_type}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1117,85 +428,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/election-types/create</code></p>
-            <!-- END_9b8f8ada932650ea7113cf358c6bbb3e -->
-            <!-- START_d69d024dd5e929df8bc8d6c442c4d2a8 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/election-types" \
--H "Accept: application/json" \
-    -d "candidate_id"="perspiciatis" \
-    -d "levels"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "notes"="perspiciatis" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/election-types/{election_type}</code></p>
+<!-- END_e3f5ebc940f9832def5e8632a27533e7 -->
+<h1>Issue</h1>
+<p>Issue CRUD Resource and ...</p>
+<!-- START_bb464e2c36d52508cb7d0e5057e0b137 -->
+<h2>Display a listing of the Issue resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/issues" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types",
-    "method": "POST",
-    "data": {
-        "candidate_id": "perspiciatis",
-        "levels": "[\"foo\",\"bar\",\"baz\"]",
-        "notes": "perspiciatis"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/election-types</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>candidate_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>levels</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>notes</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_d69d024dd5e929df8bc8d6c442c4d2a8 -->
-            <!-- START_c762b5ccd540defc8f4e5df508ede344 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}",
+    "url": "http://localhost/api/v2/issues",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1205,24 +457,33 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/election-types/{election_type}</code></p>
-            <!-- END_c762b5ccd540defc8f4e5df508ede344 -->
-            <!-- START_8e228a000ba9db71be80f8690498466a -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[
+    {
+        "id": 1,
+        "title": "Economy + inclusive growth",
+        "description": "More Description",
+        "election_id": 1,
+        "created_at": "2018-11-02 09:15:05",
+        "updated_at": "2018-11-02 09:15:05"
+    }
+]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/issues</code></p>
+<!-- END_bb464e2c36d52508cb7d0e5057e0b137 -->
+<!-- START_f3fb293673f07c874bf475272972af20 -->
+<h2>Display the specified Issue resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/issues/{issue}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}/edit",
+    "url": "http://localhost/api/v2/issues/{issue}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1232,73 +493,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/election-types/{election_type}/edit</code></p>
-            <!-- END_8e228a000ba9db71be80f8690498466a -->
-            <!-- START_7bccbecfb298e46fcef8d7a13d60ffaa -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/issues/{issue}</code></p>
+<!-- END_f3fb293673f07c874bf475272972af20 -->
+<h1>IssuePosition</h1>
+<p>IssuePosition CRUD Resource and ...</p>
+<!-- START_36cd17a426c1cc0f13c45eba0407c7b1 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/issuePositions" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/election-types/{election_type}</code></p>
-            <p><code>PATCH api/v1/election-types/{election_type}</code></p>
-            <!-- END_7bccbecfb298e46fcef8d7a13d60ffaa -->
-            <!-- START_cdf9a4f6e541c83a1a8c85023ca97f45 -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/election-types/{election_type}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/election-types/{election_type}</code></p>
-            <!-- END_cdf9a4f6e541c83a1a8c85023ca97f45 -->
-            <h1>Issue</h1>
-            <p>Issue CRUD Resource and ...</p>
-            <!-- START_f1adc84d8913bec7ce8a1d13770a5566 -->
-            <h2>Display a listing of the Issue resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issues" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues",
+    "url": "http://localhost/api/v2/issuePositions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1308,302 +522,50 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issues</code></p>
-            <!-- END_f1adc84d8913bec7ce8a1d13770a5566 -->
-            <!-- START_e2c17327bfc79e50094255fb9c80194d -->
-            <h2>Show the form for creating a new Issue resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issues/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issues/create</code></p>
-            <!-- END_e2c17327bfc79e50094255fb9c80194d -->
-            <!-- START_0da248661f746ebebddda65e36e3cffc -->
-            <h2>Store a newly created Issue resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/issues" \
--H "Accept: application/json" \
-    -d "title"="sed" \
-    -d "description"="sed" \
-    -d "election_id"="sed" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues",
-    "method": "POST",
-    "data": {
-        "title": "sed",
-        "description": "sed",
-        "election_id": "sed"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/issues</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>title</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Maximum: <code>225</code></td>
-                    </tr>
-                    <tr>
-                        <td>description</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>election_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Valid election election_id</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_0da248661f746ebebddda65e36e3cffc -->
-            <!-- START_9358d4fd6cc4fe35fde4b816506da9b1 -->
-            <h2>Display the specified Issue resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issues/{issue}</code></p>
-            <!-- END_9358d4fd6cc4fe35fde4b816506da9b1 -->
-            <!-- START_0e09e3b1cf8b44e5366c6ed1f4bb0f87 -->
-            <h2>Show the form for editing the specified Issue resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issues/{issue}/edit</code></p>
-            <!-- END_0e09e3b1cf8b44e5366c6ed1f4bb0f87 -->
-            <!-- START_c2d860897e39e888ec9725c44fd1aa1c -->
-            <h2>Update the specified Issue resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}" \
--H "Accept: application/json" \
-    -d "id"="63" \
-    -d "title"="eos" \
-    -d "description"="eos" \
-    -d "election_id"="eos" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}",
-    "method": "PUT",
-    "data": {
-        "id": 63,
-        "title": "eos",
-        "description": "eos",
-        "election_id": "eos"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/issues/{issue}</code></p>
-            <p><code>PATCH api/v1/issues/{issue}</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>title</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Maximum: <code>225</code></td>
-                    </tr>
-                    <tr>
-                        <td>description</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>election_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Valid election election_id</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_c2d860897e39e888ec9725c44fd1aa1c -->
-            <!-- START_9127185b87682f8ff0064fac1272a80c -->
-            <h2>Remove the specified Issue resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issues/{issue}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/issues/{issue}</code></p>
-            <!-- END_9127185b87682f8ff0064fac1272a80c -->
-            <h1>IssuePosition</h1>
-            <p>IssuePosition CRUD Resource and ...</p>
-            <!-- START_89630927e77f061f6fcdf69ac8a8f377 -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/issuePositions?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "issue_id": 1,
+            "candidate_id": 5,
+            "title": "MY position on this issue",
+            "body": "&lt;div&gt;&lt;em&gt;“Our economy has witnessed serious macroeconomic distortions and dislocations over the years. Spiraling inflation, unemployment, gross capacity under-utilization in our industries, and the over-dependence on oil revenues have remained with us for a very long time now. To address these central problems which underline other economic difficulties we covenant to diversity the National Economy by encouraging development in non-petroleum producing sectors in order to reduce dependence on oil a main source of our National income as follows:&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;&amp;nbsp;Increase efficiency and productivity in agriculture, mining, and manufacturing sector.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Embark on gas development, conversion and utilization programmes.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Promote exports through various incentives. Support massive applied scientific research and development for production of necessary goods for economic emancipation.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Encourage the establishment and development of ‘small medium scale enterprises as engines of; economic growth.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Create a suitable environment for foreign investment to flow into the, country.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Strengthen the Naira so that it may freely find its true value in the international currency market.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Formulate and implement disciplined, budget, fiscal and monetary policies.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Work assiduously, to eradicate corruption, fraud, embezzlement and the so-called “Nigerian Way” and to enthrone a new culture of integrity, Transparency and Accountability.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;ul&gt;&lt;li&gt;&lt;em&gt;Put the organized private sector into more confidence so that they can be genuinely involved in the revamping and management of the national economy.&amp;nbsp;&lt;\/em&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;div&gt;&lt;em&gt;Turn the abundant arable land of this country to be the food basket of Africa and oven the world.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Encourage industrialists to develop local substitutes for important raw materials and to use the raw materials front put enhanced agricultural production the catalyst for our industrial revolution.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Cut out waste in public finance.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Set out targets for growth rates in the economic.&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Enlist the interest of labour unions in all activities so that peaceful relations can be created in the country.&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;em&gt;Put in place an energy policy that will ensure efficient exploitation, distribution and&amp;nbsp;&lt;\/em&gt;&lt;\/div&gt;&lt;div&gt;&lt;br&gt;&lt;br&gt;&lt;\/div&gt;",
+            "audio": null,
+            "infographic": null,
+            "sources": "{\"source_link\":null}",
+            "created_at": "2018-11-02 09:16:53",
+            "updated_at": "2018-11-02 09:16:53"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/issuePositions?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/issuePositions?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/issuePositions?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/issuePositions",
+    "path": "http:\/\/localhost\/api\/v2\/issuePositions",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issuePositions</code></p>
-            <!-- END_89630927e77f061f6fcdf69ac8a8f377 -->
-            <!-- START_b53d2f1b80961bf3ac23d35f55dfc22c -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/issuePositions</code></p>
+<!-- END_36cd17a426c1cc0f13c45eba0407c7b1 -->
+<!-- START_d455ebadcf02d7dbbf3c580b81ea406c -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/issuePositions/{issuePosition}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/create",
+    "url": "http://localhost/api/v2/issuePositions/{issuePosition}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1613,47 +575,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issuePositions/create</code></p>
-            <!-- END_b53d2f1b80961bf3ac23d35f55dfc22c -->
-            <!-- START_38cf2aacafba1eba5bf7102abe4e4fc6 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/issuePositions/{issuePosition}</code></p>
+<!-- END_d455ebadcf02d7dbbf3c580b81ea406c -->
+<h1>Membership</h1>
+<p>Membership CRUD Resource and ...</p>
+<!-- START_31001777264b7e2a5e915b8970b90f88 -->
+<h2>Display a listing of the Membership resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/memberships" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/issuePositions</code></p>
-            <!-- END_38cf2aacafba1eba5bf7102abe4e4fc6 -->
-            <!-- START_666147ef084151277a143a62fda6d044 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}",
+    "url": "http://localhost/api/v2/memberships",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1663,140 +604,58 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issuePositions/{issuePosition}</code></p>
-            <!-- END_666147ef084151277a143a62fda6d044 -->
-            <!-- START_0e371a655588212590a7aafda3f38d1a -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/issuePositions/{issuePosition}/edit</code></p>
-            <!-- END_0e371a655588212590a7aafda3f38d1a -->
-            <!-- START_424fc72bdb1d20febe2f3452fd43911f -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/issuePositions/{issuePosition}</code></p>
-            <p><code>PATCH api/v1/issuePositions/{issuePosition}</code></p>
-            <!-- END_424fc72bdb1d20febe2f3452fd43911f -->
-            <!-- START_86502cc21c955fa84343d2bfe8326aa6 -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/issuePositions/{issuePosition}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/issuePositions/{issuePosition}</code></p>
-            <!-- END_86502cc21c955fa84343d2bfe8326aa6 -->
-            <h1>Membership</h1>
-            <p>Membership CRUD Resource and ...</p>
-            <!-- START_2d342eface274147fc61616c7631aea3 -->
-            <h2>Display a listing of the Membership resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/memberships" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/memberships?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "politician_id": 1,
+            "political_party_id": 1,
+            "position_id": 2,
+            "start_date": "2018-11-15 00:00:00",
+            "end_date": null,
+            "created_at": "2018-11-01 16:51:45",
+            "updated_at": "2018-11-01 16:51:45"
+        },
+        {
+            "id": 2,
+            "politician_id": 2,
+            "political_party_id": 1,
+            "position_id": 1,
+            "start_date": "2018-11-24 00:00:00",
+            "end_date": null,
+            "created_at": "2018-11-02 07:28:38",
+            "updated_at": "2018-11-02 07:28:38"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/memberships?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/memberships?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/memberships?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/memberships",
+    "path": "http:\/\/localhost\/api\/v2\/memberships",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/memberships</code></p>
-            <!-- END_2d342eface274147fc61616c7631aea3 -->
-            <!-- START_eab994ee0ed599821452fac8616eb2d2 -->
-            <h2>Show the form for creating a new Membership resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/memberships/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/memberships</code></p>
+<!-- END_31001777264b7e2a5e915b8970b90f88 -->
+<!-- START_dd19c9942865ac53c511261bf3afa0ee -->
+<h2>Display the specified Membership resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/memberships/{membership}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships/create",
+    "url": "http://localhost/api/v2/memberships/{membership}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1806,47 +665,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/memberships/create</code></p>
-            <!-- END_eab994ee0ed599821452fac8616eb2d2 -->
-            <!-- START_e353a444a3f8e0db7c63f8d97cd46116 -->
-            <h2>Store a newly created Membership resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/memberships" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/memberships/{membership}</code></p>
+<!-- END_dd19c9942865ac53c511261bf3afa0ee -->
+<h1>Office</h1>
+<p>Office CRUD Resource and ...</p>
+<!-- START_30dd107bce3240f5cf3d1aaf2d67de5b -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/offices" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/memberships</code></p>
-            <!-- END_e353a444a3f8e0db7c63f8d97cd46116 -->
-            <!-- START_4f12e514b117014725f58a6abe92411b -->
-            <h2>Display the specified Membership resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}",
+    "url": "http://localhost/api/v2/offices",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1856,140 +694,46 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/memberships/{membership}</code></p>
-            <!-- END_4f12e514b117014725f58a6abe92411b -->
-            <!-- START_0b9ea174acd86a434b8587f3b10f7828 -->
-            <h2>Show the form for editing the specified Membership resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/memberships/{membership}/edit</code></p>
-            <!-- END_0b9ea174acd86a434b8587f3b10f7828 -->
-            <!-- START_e570c052175c91264019087b5d836007 -->
-            <h2>Update the specified Membership resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/memberships/{membership}</code></p>
-            <p><code>PATCH api/v1/memberships/{membership}</code></p>
-            <!-- END_e570c052175c91264019087b5d836007 -->
-            <!-- START_f92720722d4a7bcebbd68ac33e0c7dab -->
-            <h2>Remove the specified Membership resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/memberships/{membership}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/memberships/{membership}</code></p>
-            <!-- END_f92720722d4a7bcebbd68ac33e0c7dab -->
-            <h1>Office</h1>
-            <p>Office CRUD Resource and ...</p>
-            <!-- START_e0fdf3b324de0a26f7ab2a109561d9f0 -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/offices" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/offices?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "office_type_id": 2,
+            "name": "President of Nigeria",
+            "meta": "{\"state\":null,\"local_goverment\":null,\"other_information\":null}",
+            "created_at": "2018-11-02 08:18:57",
+            "updated_at": "2018-11-02 08:18:57"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/offices?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/offices?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/offices?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/offices",
+    "path": "http:\/\/localhost\/api\/v2\/offices",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 1,
+    "total": 1
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/offices</code></p>
-            <!-- END_e0fdf3b324de0a26f7ab2a109561d9f0 -->
-            <!-- START_af9f2e25ea13d88666d92af37b3f4398 -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/offices/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/offices</code></p>
+<!-- END_30dd107bce3240f5cf3d1aaf2d67de5b -->
+<!-- START_e245d680fd971ac9e4f51f5d5172e32e -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/offices/{office}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices/create",
+    "url": "http://localhost/api/v2/offices/{office}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1999,47 +743,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/offices/create</code></p>
-            <!-- END_af9f2e25ea13d88666d92af37b3f4398 -->
-            <!-- START_fd04e03b14de6c9023cc1344dca029a3 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/offices" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/offices/{office}</code></p>
+<!-- END_e245d680fd971ac9e4f51f5d5172e32e -->
+<h1>OfficeType</h1>
+<p>OfficeType CRUD Resource and ...</p>
+<!-- START_424fbcf5d9d92477ff6456ddccef5375 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/office-types" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/offices</code></p>
-            <!-- END_fd04e03b14de6c9023cc1344dca029a3 -->
-            <!-- START_9693401d05dd07994b96340e69e0a736 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}",
+    "url": "http://localhost/api/v2/office-types",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2049,140 +772,52 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/offices/{office}</code></p>
-            <!-- END_9693401d05dd07994b96340e69e0a736 -->
-            <!-- START_97a2a14fd980614a996fc15de4f15346 -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/offices/{office}/edit</code></p>
-            <!-- END_97a2a14fd980614a996fc15de4f15346 -->
-            <!-- START_ff57b906bbf30f24a2e5e8b4e64bd687 -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/offices/{office}</code></p>
-            <p><code>PATCH api/v1/offices/{office}</code></p>
-            <!-- END_ff57b906bbf30f24a2e5e8b4e64bd687 -->
-            <!-- START_7591a33c7aec69f21c94ea8208cca238 -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/offices/{office}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/offices/{office}</code></p>
-            <!-- END_7591a33c7aec69f21c94ea8208cca238 -->
-            <h1>OfficeType</h1>
-            <p>OfficeType CRUD Resource and ...</p>
-            <!-- START_e7c2eca9faca13ed73eb481eb271b7b9 -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/office-types" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/office-types?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 2,
+            "name": "Presidential Offfice",
+            "description": "office of the president",
+            "created_at": "2018-11-02 08:17:55",
+            "updated_at": "2018-11-02 08:17:55"
+        },
+        {
+            "id": 3,
+            "name": "Governorship Office",
+            "description": "Office of the Governors",
+            "created_at": "2018-11-02 08:18:30",
+            "updated_at": "2018-11-02 08:18:30"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/office-types?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/office-types?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/office-types?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/office-types",
+    "path": "http:\/\/localhost\/api\/v2\/office-types",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/office-types</code></p>
-            <!-- END_e7c2eca9faca13ed73eb481eb271b7b9 -->
-            <!-- START_026dad414377f712ad72be4fb588c2f4 -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/office-types/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/office-types</code></p>
+<!-- END_424fbcf5d9d92477ff6456ddccef5375 -->
+<!-- START_1915c4f14f706caa7a183eca839306ee -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/office-types/{office_type}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types/create",
+    "url": "http://localhost/api/v2/office-types/{office_type}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2192,47 +827,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/office-types/create</code></p>
-            <!-- END_026dad414377f712ad72be4fb588c2f4 -->
-            <!-- START_42816a1bfbf8d5d18dcd4b552125415c -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/office-types" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/office-types/{office_type}</code></p>
+<!-- END_1915c4f14f706caa7a183eca839306ee -->
+<h1>Politician</h1>
+<p>Politician CRUD Resource and ...</p>
+<!-- START_bde99f77b5455a62e1dacc20eb89b1dd -->
+<h2>Display a listing of the Politician resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/politicians" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/office-types</code></p>
-            <!-- END_42816a1bfbf8d5d18dcd4b552125415c -->
-            <!-- START_9af253477de08bae38b0e40a598b4905 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}",
+    "url": "http://localhost/api/v2/politicians",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2242,140 +856,113 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/office-types/{office_type}</code></p>
-            <!-- END_9af253477de08bae38b0e40a598b4905 -->
-            <!-- START_71a9bb686096762ec033e63b45dfc516 -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/office-types/{office_type}/edit</code></p>
-            <!-- END_71a9bb686096762ec033e63b45dfc516 -->
-            <!-- START_198dc3187e6c4dca4ecd1bc7b22e397a -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/office-types/{office_type}</code></p>
-            <p><code>PATCH api/v1/office-types/{office_type}</code></p>
-            <!-- END_198dc3187e6c4dca4ecd1bc7b22e397a -->
-            <!-- START_236b228ce7a0f9fec59cc03adc16a4a3 -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/office-types/{office_type}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/office-types/{office_type}</code></p>
-            <!-- END_236b228ce7a0f9fec59cc03adc16a4a3 -->
-            <h1>Politician</h1>
-            <p>Politician CRUD Resource and ...</p>
-            <!-- START_fc7fb7e2ec5f70bb12fb7408ef7db5d2 -->
-            <h2>Display a listing of the Politician resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/politicians" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/politicians?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "title": "Mr",
+            "name": "Okanlawon Emmanuel",
+            "other_names": "{\"name\":\"ayodele\",\"start_date\":null,\"end_date\":null,\"note\":null}",
+            "email": "okanlawonemmanuel41@gmail.com",
+            "gender": "Okanlawon Emmanuel",
+            "birth_date": "2018-11-28 00:00:00",
+            "death_date": "2018-11-07 00:00:00",
+            "image": "JmCGiyeQHtWzyJ97mwuYsyEZVtcB9PQQoxabDR9j.jpeg",
+            "cover_image": "25lcoL3cOXMR0NjjXp5FL2LSrmhTDjywDPx6xVws.jpeg",
+            "summary": "this is a summary",
+            "biography": "&lt;div&gt;okanlawon emmanuel&lt;\/div&gt;",
+            "national_identity": "Nigerian",
+            "contact_details": "{\"contact_detail_1\":\"Contact Detail 1\",\"contact_detail_2\":\"Contact Detail 2\"}",
+            "links": "{\"website\":\"www.facebook.com\",\"social\":null}",
+            "created_at": "2018-11-01 15:33:02",
+            "updated_at": "2018-11-01 15:38:06",
+            "candidates": [],
+            "memberships": [
+                {
+                    "id": 1,
+                    "politician_id": 1,
+                    "political_party_id": 1,
+                    "position_id": 2,
+                    "start_date": "2018-11-15 00:00:00",
+                    "end_date": null,
+                    "created_at": "2018-11-01 16:51:45",
+                    "updated_at": "2018-11-01 16:51:45"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Mr",
+            "name": "Faith Kalu",
+            "other_names": "{\"name\":\"Isick\",\"start_date\":null,\"end_date\":null,\"note\":null}",
+            "email": "obigtechnologies@gmail.com",
+            "gender": "Male",
+            "birth_date": "2018-11-22 00:00:00",
+            "death_date": "2018-11-23 00:00:00",
+            "image": "4h0GuiirdJMRNCfTGXXjylmV6qo0cUD5GSiqnEI2.png",
+            "cover_image": "C5gTf9znuUjoWQQw99jD52pLo4wKgOOMkLgc0iuo.jpeg",
+            "summary": "This is another Politician",
+            "biography": "&lt;div&gt;This is another Politician biography&lt;\/div&gt;",
+            "national_identity": "Nigerian",
+            "contact_details": "{\"contact_detail_1\":\"Contact Detail 1\",\"contact_detail_2\":\"ontact Detail 2\"}",
+            "links": "{\"website\":null,\"social-media\":null}",
+            "created_at": "2018-11-02 07:28:16",
+            "updated_at": "2018-11-02 07:28:16",
+            "candidates": [
+                {
+                    "id": 5,
+                    "election_id": 1,
+                    "election_type_id": 3,
+                    "office_id": 1,
+                    "membership_id": 2,
+                    "created_at": "2018-11-02 08:28:46",
+                    "updated_at": "2018-11-02 08:28:46",
+                    "politician_id": 2
+                }
+            ],
+            "memberships": [
+                {
+                    "id": 2,
+                    "politician_id": 2,
+                    "political_party_id": 1,
+                    "position_id": 1,
+                    "start_date": "2018-11-24 00:00:00",
+                    "end_date": null,
+                    "created_at": "2018-11-02 07:28:38",
+                    "updated_at": "2018-11-02 07:28:38"
+                }
+            ]
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/politicians?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/politicians?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/politicians?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/politicians",
+    "path": "http:\/\/localhost\/api\/v2\/politicians",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/politicians</code></p>
-            <!-- END_fc7fb7e2ec5f70bb12fb7408ef7db5d2 -->
-            <!-- START_d5bed3305524cabd9078fd6c9c0a53a2 -->
-            <h2>Show the form for creating a new Politician resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/politicians/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/politicians</code></p>
+<!-- END_bde99f77b5455a62e1dacc20eb89b1dd -->
+<!-- START_92c3c96ec46f0cf250f3794ced81f6ba -->
+<h2>Display the specified Politician resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/politicians/{politician}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians/create",
+    "url": "http://localhost/api/v2/politicians/{politician}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2385,167 +972,26 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/politicians/create</code></p>
-            <!-- END_d5bed3305524cabd9078fd6c9c0a53a2 -->
-            <!-- START_62953582be5e1229b7449c3251bc376b -->
-            <h2>Store a newly created Politician resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/politicians" \
--H "Accept: application/json" \
-    -d "title"="quia" \
-    -d "name"="quia" \
-    -d "other_names"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "email"="hessel.claire@example.com" \
-    -d "gender"="male" \
-    -d "birth-date"="1976-01-26" \
-    -d "death-date"="1976-01-26" \
-    -d "image"="http://hessel.com/" \
-    -d "cover-image"="http://hessel.com/" \
-    -d "summary"="quia" \
-    -d "biography"="quia" \
-    -d "national_identity"="quia" \
-    -d "contact_details"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-    -d "links"="[&amp;quot;foo&amp;quot;,&amp;quot;bar&amp;quot;,&amp;quot;baz&amp;quot;]" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/politicians/{politician}</code></p>
+<!-- END_92c3c96ec46f0cf250f3794ced81f6ba -->
+<h1>Position</h1>
+<p>Position CRUD Resource and ...</p>
+<!-- START_fd1df2fcd43f75d8e4ab6e54f1e55454 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/positions" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians",
-    "method": "POST",
-    "data": {
-        "title": "quia",
-        "name": "quia",
-        "other_names": "[\"foo\",\"bar\",\"baz\"]",
-        "email": "hessel.claire@example.com",
-        "gender": "male",
-        "birth-date": "1976-01-26",
-        "death-date": "1976-01-26",
-        "image": "http:\/\/hessel.com\/",
-        "cover-image": "http:\/\/hessel.com\/",
-        "summary": "quia",
-        "biography": "quia",
-        "national_identity": "quia",
-        "contact_details": "[\"foo\",\"bar\",\"baz\"]",
-        "links": "[\"foo\",\"bar\",\"baz\"]"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/politicians</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>title</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Maximum: <code>25</code></td>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Maximum: <code>25</code></td>
-                    </tr>
-                    <tr>
-                        <td>other_names</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>email</td>
-                        <td>email</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>gender</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td><code>male</code> or <code>female</code></td>
-                    </tr>
-                    <tr>
-                        <td>birth-date</td>
-                        <td>date</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>death-date</td>
-                        <td>date</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>image</td>
-                        <td>url</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>cover-image</td>
-                        <td>url</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>summary</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>biography</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>national_identity</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>contact_details</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                    <tr>
-                        <td>links</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Must be a valid JSON string.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_62953582be5e1229b7449c3251bc376b -->
-            <!-- START_b01589c790008dac98af6119817dc217 -->
-            <h2>Display the specified Politician resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}",
+    "url": "http://localhost/api/v2/positions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2555,140 +1001,52 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/politicians/{politician}</code></p>
-            <!-- END_b01589c790008dac98af6119817dc217 -->
-            <!-- START_64940f1520e6fb42c8f27702dd6442a0 -->
-            <h2>Show the form for editing the specified Politician resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/politicians/{politician}/edit</code></p>
-            <!-- END_64940f1520e6fb42c8f27702dd6442a0 -->
-            <!-- START_415f1426227981a109e7ae15839d0374 -->
-            <h2>Update the specified Politician resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/politicians/{politician}</code></p>
-            <p><code>PATCH api/v1/politicians/{politician}</code></p>
-            <!-- END_415f1426227981a109e7ae15839d0374 -->
-            <!-- START_9f8ca189b8e710a661a8dba53f9a9575 -->
-            <h2>Remove the specified Politician resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/politicians/{politician}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/politicians/{politician}</code></p>
-            <!-- END_9f8ca189b8e710a661a8dba53f9a9575 -->
-            <h1>Position</h1>
-            <p>Position CRUD Resource and ...</p>
-            <!-- START_6caa5bf56397ec8b3e3f066edf54d9ac -->
-            <h2>Display a listing of the resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/positions" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">{
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
     "current_page": 1,
-    "data": [],
-    "first_page_url": "http:\/\/localhost\/api\/v1\/positions?page=1",
-    "from": null,
+    "data": [
+        {
+            "id": 1,
+            "position": "Member",
+            "role_description": "A member of a Party",
+            "created_at": "2018-11-01 16:48:13",
+            "updated_at": "2018-11-01 16:48:13"
+        },
+        {
+            "id": 2,
+            "position": "Chairman",
+            "role_description": "Chairman of the Party",
+            "created_at": "2018-11-01 16:48:44",
+            "updated_at": "2018-11-01 16:48:44"
+        }
+    ],
+    "first_page_url": "http:\/\/localhost\/api\/v2\/positions?page=1",
+    "from": 1,
     "last_page": 1,
-    "last_page_url": "http:\/\/localhost\/api\/v1\/positions?page=1",
+    "last_page_url": "http:\/\/localhost\/api\/v2\/positions?page=1",
     "next_page_url": null,
-    "path": "http:\/\/localhost\/api\/v1\/positions",
+    "path": "http:\/\/localhost\/api\/v2\/positions",
     "per_page": 15,
     "prev_page_url": null,
-    "to": null,
-    "total": 0
+    "to": 2,
+    "total": 2
 }</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/positions</code></p>
-            <!-- END_6caa5bf56397ec8b3e3f066edf54d9ac -->
-            <!-- START_371289ff51ce1b9934f3dcec5f9ea97a -->
-            <h2>Show the form for creating a new resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/positions/create" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/positions</code></p>
+<!-- END_fd1df2fcd43f75d8e4ab6e54f1e55454 -->
+<!-- START_ff6718600b3d1c16140813fe374e8be9 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v2/positions/{position}" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions/create",
+    "url": "http://localhost/api/v2/positions/{position}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2698,401 +1056,20 @@ $.ajax(settings).done(function (response) {
 $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/positions/create</code></p>
-            <!-- END_371289ff51ce1b9934f3dcec5f9ea97a -->
-            <!-- START_9a521774646247b1e29363355b3410b9 -->
-            <h2>Store a newly created resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/positions" \
--H "Accept: application/json" \
-    -d "role"="id" \
-    -d "political_party_id"="id" \
-    -d "position"="id" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions",
-    "method": "POST",
-    "data": {
-        "role": "id",
-        "political_party_id": "id",
-        "position": "id"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/positions</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>role</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>political_party_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>position</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_9a521774646247b1e29363355b3410b9 -->
-            <!-- START_a624cd1ace79089cd1da7bea75fd8cf2 -->
-            <h2>Display the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">[]</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/positions/{position}</code></p>
-            <!-- END_a624cd1ace79089cd1da7bea75fd8cf2 -->
-            <!-- START_0bbaed13d8e7cb3c761344bd3228c051 -->
-            <h2>Show the form for editing the specified resource.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X GET "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}/edit" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <blockquote>
-                <p>Example response:</p>
-            </blockquote>
-            <pre><code class="language-json">null</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>GET api/v1/positions/{position}/edit</code></p>
-            <!-- END_0bbaed13d8e7cb3c761344bd3228c051 -->
-            <!-- START_912c914c317a2a1924f07de84914becd -->
-            <h2>Update the specified resource in storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X PUT "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}" \
--H "Accept: application/json" \
-    -d "id"="91867" \
-    -d "role"="qui" \
-    -d "political_party_id"="qui" \
-    -d "position"="qui" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}",
-    "method": "PUT",
-    "data": {
-        "id": 91867,
-        "role": "qui",
-        "political_party_id": "qui",
-        "position": "qui"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>PUT api/v1/positions/{position}</code></p>
-            <p><code>PATCH api/v1/positions/{position}</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>role</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                    <tr>
-                        <td>political_party_id</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>position</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_912c914c317a2a1924f07de84914becd -->
-            <!-- START_d79eb75a14cd5d294d386c60a99c0889 -->
-            <h2>Remove the specified resource from storage.</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X DELETE "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/positions/{position}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>DELETE api/v1/positions/{position}</code></p>
-            <!-- END_d79eb75a14cd5d294d386c60a99c0889 -->
-            <h1>User</h1>
-            <p>User Resource Login, Register, Details etc</p>
-            <!-- START_8c0e48cd8efa861b308fc45872ff0837 -->
-            <h2>Login endpoint</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/login" \
--H "Accept: application/json" \
-    -d "email"="harmon85@example.com" \
-    -d "password"="dolorum" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/login",
-    "method": "POST",
-    "data": {
-        "email": "harmon85@example.com",
-        "password": "dolorum"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/login</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>email</td>
-                        <td>email</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>password</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_8c0e48cd8efa861b308fc45872ff0837 -->
-            <!-- START_8ae5d428da27b2b014dc767c2f19a813 -->
-            <h2>Register endpoint</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/register" \
--H "Accept: application/json" \
-    -d "id"="95552243" \
-    -d "first_name"="dolor" \
-    -d "last_name"="dolor" \
-    -d "email"="mwilkinson@example.com" \
-    -d "password"="dolor" \
-    -d "c_password"="dolor" \
-    -d "username"="dolor" \
-    -d "phone_number"="dolor" \
-</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/register",
-    "method": "POST",
-    "data": {
-        "id": 95552243,
-        "first_name": "dolor",
-        "last_name": "dolor",
-        "email": "mwilkinson@example.com",
-        "password": "dolor",
-        "c_password": "dolor",
-        "username": "dolor",
-        "phone_number": "dolor"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/register</code></p>
-            <h4>Parameters</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>id</td>
-                        <td>integer</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>first_name</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>last_name</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>email</td>
-                        <td>email</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>password</td>
-                        <td>string</td>
-                        <td>required</td>
-                    </tr>
-                    <tr>
-                        <td>c_password</td>
-                        <td>string</td>
-                        <td>required</td>
-                        <td>Must be the same as <code>password</code></td>
-                    </tr>
-                    <tr>
-                        <td>username</td>
-                        <td>string</td>
-                        <td>optional</td>
-                        <td>Maximum: <code>255</code></td>
-                    </tr>
-                    <tr>
-                        <td>phone_number</td>
-                        <td>string</td>
-                        <td>optional</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- END_8ae5d428da27b2b014dc767c2f19a813 -->
-            <!-- START_7d037587811c04093c923c7db7411aba -->
-            <h2>Details endpoint</h2>
-            <blockquote>
-                <p>Example request:</p>
-            </blockquote>
-            <pre><code class="language-bash">curl -X POST "http://www.civicmonitor.herokuapp.com/api/v1/details" \
--H "Accept: application/json"</code></pre>
-            <pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://www.civicmonitor.herokuapp.com/api/v1/details",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-            <h3>HTTP Request</h3>
-            <p><code>POST api/v1/details</code></p>
-            <!-- END_7d037587811c04093c923c7db7411aba -->
-        </div>
-        <div class="dark-box">
-            <div class="lang-selector">
-                <a href="#" data-language-name="bash">bash</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-            </div>
-        </div>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">[]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v2/positions/{position}</code></p>
+<!-- END_ff6718600b3d1c16140813fe374e8be9 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
     </div>
-</body>
-
+  </body>
 </html>

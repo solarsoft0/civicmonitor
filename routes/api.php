@@ -39,3 +39,43 @@ Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
     Route::resource('positions', 'PositionController');
 
 });
+
+Route::group(['prefix' => 'v2'], function () {
+    Route::get('candidates/{candidate}/issue-positions', 'CandidateController@candidateIssuePositions');
+    Route::get('candidates/{candidate}/political-parties', 'CandidateController@candidatePoliticalParties');
+    // Route::post('details', 'API\UsersController@details')
+    Route::resource('candidates', 'CandidateController')->only([
+    'index', 'show'
+]);
+    Route::resource('elections', 'ElectionController')->only([
+    'index', 'show'
+]);
+    Route::resource('election-types', 'ElectionTypeController')->only([
+    'index', 'show'
+]);
+    Route::resource('educations', 'EducationController')->only([
+    'index', 'show'
+]);
+    Route::resource('issues', 'IssueController')->only([
+    'index', 'show'
+]);
+    Route::resource('issuePositions', 'IssuePositionController')->only([
+    'index', 'show'
+]);
+    Route::resource('memberships', 'MembershipController')->only([
+    'index', 'show'
+]);
+    Route::resource('offices', 'OfficeController')->only([
+    'index', 'show'
+]);
+    Route::resource('office-types', 'OfficeTypeController')->only([
+    'index', 'show'
+]);
+    Route::resource('politicians', 'PoliticianController')->only([
+    'index', 'show'
+]);
+    Route::resource('positions', 'PositionController')->only([
+    'index', 'show'
+]);
+
+});
