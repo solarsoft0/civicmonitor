@@ -1,0 +1,317 @@
+{
+    "variables": [],
+    "info": {
+        "name": "",
+        "_postman_id": "cdbe8b6b-d28e-44bf-8c03-08a9d3dc2e60",
+        "description": "",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Candidate\n\nCandidate CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get a Candidate Issue Positions.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}/issue-positions",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Get a Candidate Political Parties.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}/political-parties",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/candidates/{candidate}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Education\n\nEducation CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/educations",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/educations/{education}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Election\n\nElection CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the election resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/elections",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified election resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/elections/{election}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ElectionType\n\nElectionType CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/election-types",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/election-types/{election_type}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Issue\n\nIssue CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the Issue resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issues",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified Issue resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issues/{issue}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "IssuePosition\n\nIssuePosition CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issuePositions",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/issuePositions/{issuePosition}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Membership\n\nMembership CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the Membership resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/memberships",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified Membership resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/memberships/{membership}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Office\n\nOffice CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/offices",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/offices/{office}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "OfficeType\n\nOfficeType CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/office-types",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/office-types/{office_type}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Politician\n\nPolitician CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the Politician resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/politicians",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified Politician resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/politicians/{politician}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Position\n\nPosition CRUD Resource and ...",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/positions",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": "http://civicmonitor.herokuapp.com/api/v2/positions/{position}",
+                        "method": "GET",
+                        "body": { "mode": "formdata", "formdata": [] },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}
