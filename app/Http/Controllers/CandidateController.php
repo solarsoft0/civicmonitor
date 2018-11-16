@@ -68,7 +68,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
 
-        return response($candidate->with('membership.political_party','membership.politician')->get());
+        return response($candidate->load('membership.political_party','membership.politician')->get());
 
     }
 
