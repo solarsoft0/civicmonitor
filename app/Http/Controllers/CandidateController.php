@@ -8,6 +8,7 @@ use App\Http\Requests\CandidatePoliticalPartiesRequest;
 use App\Http\Requests\StoreCandidateRequest;
 use App\Http\Requests\UpdateCandidateRequest;
 use App\Http\Resources\CandidateCollection;
+use App\Http\Resources\CandidateResource;
 use App\Issue;
 use Illuminate\Http\Request;
 
@@ -54,7 +55,7 @@ class CandidateController extends Controller
 
 // todo image
         if (request()->wantsJson()) {
-            return response($candidate, 201);
+            return new CandidateResource($candidate, 201);
         }
 
     }
@@ -68,7 +69,8 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
 
-        return response($candidate->load('membership.political_party','membership.politician')->get());
+$candidate = $candidate->load('membership.political_party','membership.politician');
+          return new CandidateResource($candidate);
 
     }
 
@@ -97,7 +99,7 @@ class CandidateController extends Controller
             'description' => request('description'),
         ]));
 
-        return $candidate;
+        return new CandidateResource($candidate);
 
     }
 
@@ -128,12 +130,12 @@ class CandidateController extends Controller
 
     public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
     {
-        $candidateIssuePositions = $candidate->with('issue_positions','issue_positions.issue')->get();
+        $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue');
     
         if (request()->wantsJson()) {
-            return response($candidateIssuePositions, 200);
+            return new CandidateResource($candidateIssuePositions);
         }
-            return response($candidateIssuePositions, 200);
+            return new CandidateResource($candidateIssuePositions);
 
     }
 
@@ -146,11 +148,11 @@ class CandidateController extends Controller
 
     public function candidatePoliticalParties(Candidate $candidate, CandidatePoliticalPartiesRequest $request)
     {
-        $candidateIssuePositions = $candidate->with('membership.political_party')->get();
-        $candidateIssuePositions =collect($candidateIssuePositions[0]->membership->political_party);
+        $candidateIssuePositions = $candidate->load('membership.political_party');
+        // $candidateIssuePositions =collect($candidateIssuePositions[0]->membership->political_party);
 
         if (request()->wantsJson()) {
-            return response($candidateIssuePositions, 200);
+            return new CandidateResource($candidateIssuePositions, 200);
         }
 
     }
