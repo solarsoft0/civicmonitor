@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePoliticianRequest;
 use App\Http\Requests\UpdatePoliticianRequest;
 use App\Politician;
+use App\Http\Resources\Resource;
 use Illuminate\Http\Request;
 
 /**
@@ -24,7 +25,7 @@ class PoliticianController extends Controller
     {
 
 
-        $politicians = Politician::with("candidates","memberships")->paginate(15);
+        $politicians = Politician::with("politician","memberships")->paginate(15);
 
         return response($politicians);
 
@@ -112,4 +113,26 @@ class PoliticianController extends Controller
 //
 
     }
+
+
+
+     public function search(Request $request)
+    {
+// First we define the error message we are going to show if no keywords
+        // existed or if no results found.
+        $error = ['error' => 'No results found, please try with different keywords.'];
+
+        // Making sure the user entered a keyword.
+        if($request->has('q')) {
+
+            // Using the Laravel Scout syntax to search the politician table.
+            $politician = Politician::search($request->get('q'))->get();
+
+            // If there are results return them, if none, return the error message.
+            return $politician->count() ? new Resource($politician) : $error;
+
+        }
+
+        // Return the error message if no keywords existed
+        return $error;    }
 }

@@ -79,6 +79,6 @@ Route::group(['prefix' => 'v2'], function () {
 ]);
 
 
-    Route::get('/search', 'CandidateController@search')->name('api.search');
+    Route::get('/search', 'PoliticianController@search')->name('api.search');
 
 });

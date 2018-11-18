@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class Politician extends Model
 {
+      use Searchable;
+
+      
       protected $casts = [
     'birth_date' => 'date',
     'death_date' => 'date',
