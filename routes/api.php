@@ -78,4 +78,7 @@ Route::group(['prefix' => 'v2'], function () {
     'index', 'show'
 ]);
 
+
+    Route::get('/search', 'CandidateController@search')->name('api.search');
+
 });
