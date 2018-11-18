@@ -167,10 +167,10 @@ $candidate = $candidate->load('membership.political_party','membership.politicia
         if($request->has('q')) {
 
             // Using the Laravel Scout syntax to search the Candidates table.
-            $posts = Candidate::search($request->get('q'))->get();
+            $candidates = Candidate::search($request->get('q'))->get();
 
             // If there are results return them, if none, return the error message.
-            return $posts->count() ? new CandidateResource($posts->load('issue_positions','issue_positions.issue')) : $error;
+            return $candidates->count() ? new CandidateResource($candidates->load('issue_positions','issue_positions.issue')) : $error;
 
         }
 
