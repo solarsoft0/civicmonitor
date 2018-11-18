@@ -25,7 +25,7 @@ class PoliticianController extends Controller
     {
 
 
-        $politicians = Politician::with("politician","memberships")->paginate(15);
+        $politicians = Politician::with("candidates","memberships")->paginate(15);
 
         return response($politicians);
 
