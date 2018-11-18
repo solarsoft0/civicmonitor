@@ -129,7 +129,7 @@ class PoliticianController extends Controller
             $politician = Politician::search($request->get('q'))->get();
 
             // If there are results return them, if none, return the error message.
-            return $politician->count() ? new Resource($politician) : $error;
+            return $politician->count() ? new Resource($politician->load("candidates","memberships")) : $error;
 
         }
 

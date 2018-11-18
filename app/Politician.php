@@ -9,7 +9,7 @@ class Politician extends Model
 {
       use Searchable;
 
-      
+
       protected $casts = [
     'birth_date' => 'date',
     'death_date' => 'date',
@@ -34,8 +34,7 @@ public function Memberships() {
   }
 
   
-
-
+ 
 
 
 
