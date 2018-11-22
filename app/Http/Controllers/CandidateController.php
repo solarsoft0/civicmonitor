@@ -27,7 +27,7 @@ class CandidateController extends Controller
      */
     public function index()
     {
-        $candidates = Candidate::paginate(15);
+        $candidates = Candidate::with("membership.political_party")->inRandomOrder()->paginate(24);
 
         return new CandidateCollection($candidates);
 

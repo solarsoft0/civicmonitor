@@ -25,7 +25,7 @@ class PoliticianController extends Controller
     {
 
 
-        $politicians = Politician::with("candidates","memberships")->paginate(15);
+        $politicians = Politician::with("candidates","memberships")->inRandomOrder()->paginate(24);
 
         return response($politicians);
 
