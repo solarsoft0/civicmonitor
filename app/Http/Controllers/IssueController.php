@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreIssueRequest;
 use App\Http\Requests\UpdateIssueRequest;
 use App\Issue;
+use App\Http\Resources\Resource;
+
 use Illuminate\Http\Request;
 
 /**
@@ -23,8 +25,7 @@ class IssueController extends Controller
     public function index()
     {
         $issues = Issue::all();
-
-        return response($issues);
+          return new Resource($issues);
 
     }
 
@@ -49,7 +50,8 @@ class IssueController extends Controller
         $issue = Issue::create($request->all());
 
         if (request()->wantsJson()) {
-            return response($issue, 201);
+                      return new Resource($issue);
+
         }
         
     }
@@ -62,7 +64,7 @@ class IssueController extends Controller
      */
     public function show(Issue $issue)
     {
-                return response($issue);
+                      return new Resource($issue);
 
     }
 
@@ -88,7 +90,7 @@ class IssueController extends Controller
     {
 
         $issue->update($request->all());
-        return $issue;
+                      return new Resource($issue);
 
     }
 
