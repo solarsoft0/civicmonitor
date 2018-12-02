@@ -21,12 +21,17 @@ class PoliticianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
-
-        $politicians = Politician::with("candidates","memberships","memberships.political_party")->inRandomOrder()->paginate(24);
-
+       if ($request->query('all') === "true" && $request->query('lite') === "true"){
+$politicians = Politician::select('id', 'name', 'image')->with("candidates","memberships:id,politician_id,political_party_id,position_id", "memberships.political_party:id,name,acronym,logo")->inRandomOrder()->get();
+        return new Resource($politicians);
+        }
+        else if($request->query('all') === "true"){
+              $politicians = Politician::with("candidates","memberships.political_party")->inRandomOrder()->get();
+        return new Resource($politicians);
+        }
+        $politicians = Politician::with("candidates","memberships.political_party")->inRandomOrder()->paginate(24);
         return response($politicians);
 
     }
