@@ -44,10 +44,3 @@ stop_review_app:
     - ssh-keyscan -H 22 "46.101.194.112" >> ~/.ssh/known_hosts
     - ssh -t dokku@46.101.194.112 -- --force apps:destroy "$CI_ENVIRONMENT_SLUG"
 
-before_script:
-  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-  - eval $(ssh-agent -s)
-  - mkdir -p ~/.ssh
-  - chmod 700 ~/.ssh
-  - echo "$SSH_PRIVATE_KEY" | ssh-add - > ~/.ssh/id_rsa
-  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
