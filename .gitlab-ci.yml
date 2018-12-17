@@ -1,0 +1,45 @@
+stages:
+  - deploy
+
+variables:
+  APP_NAME: api
+
+deploy:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  environment:
+    name: production
+    url: https://$APP_NAME.civicmonitor.com/
+  only:
+    - master
+  script:
+    - git-push ssh://dokku@46.101.194.112:22/$APP_NAME
+
+review_app:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  environment:
+    name: review/$CI_ENVIRONMENT_SLUG
+    url: https://$CI_ENVIRONMENT_SLUG.civicmonitor.com/
+    on_stop: stop_review_app
+  only:
+    - branches
+  except:
+    - master
+  script:
+    - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H 22 "46.101.194.112" >> ~/.ssh/known_hosts
+    - ssh -t dokku@46.101.194.112 -- apps:clone --ignore-existing --skip-deploy "$APP_NAME" "$CI_ENVIRONMENT_SLUG"
+    - git-push ssh://dokku@46.101.194.112:22/$CI_ENVIRONMENT_SLUG
+
+stop_review_app:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  environment:
+    name: review/$CI_ENVIRONMENT_SLUG
+    action: stop
+  when: manual
+  script:
+    - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H 22 "46.101.194.112" >> ~/.ssh/known_hosts
+    - ssh -t dokku@46.101.194.112 -- --force apps:destroy "$CI_ENVIRONMENT_SLUG"
