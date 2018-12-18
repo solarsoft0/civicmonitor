@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\IssuePosition;
 use Illuminate\Http\Request;
+use App\Http\Resources\Resource;
 
 /**
  * @resource IssuePosition
@@ -23,7 +24,7 @@ class IssuePositionController extends Controller
 
         $issuePositions = IssuePosition::paginate(15);
 
-        return response($issuePositions);
+        return new Resource($issuePositions);
 
     }
 
@@ -107,4 +108,7 @@ class IssuePositionController extends Controller
         return redirect()->back();
 
     }
+
+
+    
 }

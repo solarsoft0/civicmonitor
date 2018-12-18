@@ -10,6 +10,7 @@ use App\Http\Requests\UpdateCandidateRequest;
 use App\Http\Resources\CandidateCollection;
 use App\Http\Resources\CandidateResource;
 use App\Issue;
+use App\IssuePosition;
 use Illuminate\Http\Request;
 
 /**
@@ -130,13 +131,21 @@ $candidate = $candidate->load('membership.political_party','membership.politicia
 
     public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
     {
-        $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue');
-    
+        $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue')->all();
+    return $candidateIssuePosition;
         if (request()->wantsJson()) {
             return new CandidateResource($candidateIssuePositions);
         }
             return new CandidateResource($candidateIssuePositions);
 
+    }
+
+    public function candidateIssuePosition(Candidate $candidate, Issue $issue,  Request $request)
+    {
+        $candidateIssuePosition = IssuePosition::where("issue_id", $issue->id)->where("candidate_id", $candidate->id)->get();
+
+        return new CandidateResource($candidateIssuePosition);
+     
     }
 
     /**

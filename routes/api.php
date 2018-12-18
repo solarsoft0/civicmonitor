@@ -42,6 +42,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function () {
 
 Route::group(['prefix' => 'v2'], function () {
     Route::get('candidates/{candidate}/issue-positions', 'CandidateController@candidateIssuePositions');
+    Route::get('candidates/{candidate}/issue-position/{issue}', 'CandidateController@candidateIssuePosition');
     Route::get('candidates/{candidate}/political-parties', 'CandidateController@candidatePoliticalParties');
     // Route::post('details', 'API\UsersController@details')
     Route::resource('candidates', 'CandidateController')->only([
