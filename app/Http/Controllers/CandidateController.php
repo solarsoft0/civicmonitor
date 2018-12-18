@@ -132,7 +132,6 @@ $candidate = $candidate->load('membership.political_party','membership.politicia
     public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
     {
         $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue')->all();
-    return $candidateIssuePosition;
         if (request()->wantsJson()) {
             return new CandidateResource($candidateIssuePositions);
         }
