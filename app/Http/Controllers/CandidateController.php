@@ -129,15 +129,19 @@ $candidate = $candidate->load('membership.political_party','membership.politicia
      * @return \Illuminate\Http\Response
      */
 
+   
+
     public function candidateIssuePositions(Candidate $candidate, CandidateIssuePositionRequest $request)
     {
-        $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue')->all();
+        $candidateIssuePositions = $candidate->load('issue_positions','issue_positions.issue');
+    
         if (request()->wantsJson()) {
             return new CandidateResource($candidateIssuePositions);
         }
             return new CandidateResource($candidateIssuePositions);
 
     }
+
 
     public function candidateIssuePosition(Candidate $candidate, Issue $issue,  Request $request)
     {
