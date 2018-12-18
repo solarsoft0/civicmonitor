@@ -25,7 +25,7 @@ class PoliticianController extends Controller
     {
        if ($request->query('all') === "true" && $request->query('lite') === "true" && $request->query('paginate') === "true"){
 $politicians = Politician::select('id', 'name', 'image')->with("candidates","memberships:id,politician_id,political_party_id,position_id", "memberships.political_party:id,name,acronym,logo")->inRandomOrder()->paginate(24);
-        return new Resource ($politicians);
+        return response ($politicians);
         }
        else if ($request->query('all') === "true" && $request->query('lite') === "true"){
 $politicians = Politician::select('id', 'name', 'image')->with("candidates","memberships:id,politician_id,political_party_id,position_id", "memberships.political_party:id,name,acronym,logo")->inRandomOrder()->get();
