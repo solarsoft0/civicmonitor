@@ -145,7 +145,7 @@ $candidate = $candidate->load('membership.political_party','membership.politicia
 
     public function candidateIssuePosition(Candidate $candidate, Issue $issue,  Request $request)
     {
-        $candidateIssuePosition = IssuePosition::where("issue_id", $issue->id)->where("candidate_id", $candidate->id)->get();
+        $candidateIssuePosition = IssuePosition::where("issue_id", $issue->id)->where("candidate_id", $candidate->id)->first();
 
         return new CandidateResource($candidateIssuePosition);
      
