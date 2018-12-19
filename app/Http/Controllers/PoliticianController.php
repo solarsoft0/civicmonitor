@@ -72,8 +72,13 @@ $politicians = Politician::select('id', 'name', 'image')->with("candidates","mem
      * @param  \App\Politician  $politician
      * @return \Illuminate\Http\Response
      */
-    public function show(Politician $politician)
+    public function show(Politician $politician, Request $request)
     {
+         if ($request->query('with_candidate') === "true"){
+            $politician->load('candidates');
+        return response($politician);
+        }
+
         return response($politician);
 
     }
