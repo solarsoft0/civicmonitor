@@ -18,6 +18,7 @@ class CreateIssuePositionsTable extends Migration
             $table->UnsignedInteger('issue_id');
             $table->UnsignedInteger('candidate_id');
             $table->string('title')->nullable();
+            $table->string('summary')->nullable();
             $table->text('body');
             $table->string('audio')->nullable();
             $table->string('infographic')->nullable();

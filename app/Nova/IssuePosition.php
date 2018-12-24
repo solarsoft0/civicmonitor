@@ -53,6 +53,7 @@ class IssuePosition extends Resource
             BelongsTo::make("Issue")->sortable(),
             Text::make("Title"),
             Trix::make("Body"),
+            Trix::make("summary"),
             File::make("Audio")->hideFromIndex(),
 JSON::make('sources', [
               Text::make('source Link 1'),
