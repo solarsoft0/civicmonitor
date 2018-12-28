@@ -59,19 +59,23 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-install-cmd": [
+            "php artisan clear-compiled"
+          
         ]
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        }
+    ],
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./nova"
-        }
-    ]
+    "prefer-stable": true
 }
