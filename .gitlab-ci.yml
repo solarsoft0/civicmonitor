@@ -17,6 +17,10 @@ deploy:
     - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
     - ssh-keyscan -H 22 "$DOKKU_HOST" >> ~/.ssh/known_hosts
     - git push dokku@$DOKKU_HOST:$APP_NAME master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+    - vendor/
 
 review_app:
   stage: deploy
@@ -33,6 +37,10 @@ review_app:
     - ssh-keyscan -H 22 "$DOKKU_HOST" >> ~/.ssh/known_hosts
     - ssh -t dokku@46.101.194.112 -- apps:clone --ignore-existing --skip-deploy "$APP_NAME" "$CI_ENVIRONMENT_SLUG"
     - git push dokku@$DOKKU_HOST:$CI_ENVIRONMENT_SLUG master
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+    - vendor/
 
 
 stop_review_app:
