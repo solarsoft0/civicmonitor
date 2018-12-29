@@ -7,7 +7,6 @@ variables:
   SSH_DOKKU_PORT: '22'
 
 deploy:
-  image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
     name: production
@@ -15,10 +14,11 @@ deploy:
   only:
     - master
   script:
+    - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H 22 "$DOKKU_HOST" >> ~/.ssh/known_hosts
     - git push dokku@$DOKKU_HOST:$APP_NAME master
 
 review_app:
-  image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
     name: review/$CI_ENVIRONMENT_SLUG
@@ -36,7 +36,6 @@ review_app:
 
 
 stop_review_app:
-  image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
     name: review/$CI_ENVIRONMENT_SLUG
@@ -46,6 +45,8 @@ stop_review_app:
     - mkdir -p ~/.ssh && echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
     - echo -e "Host $DOKKU_HOST\n  Hostname $DOKKU_HOST\n  Port $SSH_DOKKU_PORT\n" >> ~/.ssh/config
     - ssh-keyscan -H $DOKKU_HOST >> ~/.ssh/known_hosts
+    - ssh -t dokku@$DOKKU_HOST -- --force apps:destroy "$CI_ENVIRONMENT_SLUG"
+
 
 before_script:
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
