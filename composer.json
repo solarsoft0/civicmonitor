@@ -11,7 +11,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://gitlab.com/solarsoft0/nova.git"
+            "url": "git@gitlab.com:solarsoft0/nova.git"
         }
     ],
     "require": {
