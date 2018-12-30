@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33d81ca3834cafc5b6db4b9469878cd7",
+    "content-hash": "fdf32a579a89a1e993aafcd665d6ede8",
     "packages": [
         {
             "name": "64robots/nova-fields",
@@ -1367,7 +1367,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://gitlab.com/solarsoft0/nova.git",
+                "url": "git@gitlab.com:solarsoft0/nova.git",
                 "reference": "f5d5f3411c9e692556497ffed119dad6325df943"
             },
             "dist": {
