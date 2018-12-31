@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d05323cbfe5c243342c94a87ee9f23d",
+    "content-hash": "552b1ae000cc715635c0d059fdb759be",
     "packages": [
         {
             "name": "64robots/nova-fields",
@@ -3801,22 +3801,22 @@
         },
         {
             "name": "spatie/nova-backup-tool",
-            "version": "1.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/nova-backup-tool.git",
-                "reference": "afdeaff5e36163cf0bb8e869214f981f96d7ac96"
+                "url": "https://github.com/solarsoft0/nova-backup-tool.git",
+                "reference": "fa3d39bb1fadd91c5c4401a1fca83df370dda48a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/nova-backup-tool/zipball/afdeaff5e36163cf0bb8e869214f981f96d7ac96",
-                "reference": "afdeaff5e36163cf0bb8e869214f981f96d7ac96",
+                "url": "https://api.github.com/repos/solarsoft0/nova-backup-tool/zipball/fa3d39bb1fadd91c5c4401a1fca83df370dda48a",
+                "reference": "fa3d39bb1fadd91c5c4401a1fca83df370dda48a",
                 "shasum": ""
             },
             "require": {
                 "laravel/nova": "*",
                 "php": ">=7.1.0",
-                "spatie/laravel-backup": "~5.10|~6.0",
+                "spatie/laravel-backup": "^6.0",
                 "symfony/process": "^4.1"
             },
             "require-dev": {
@@ -3837,7 +3837,11 @@
                     "Spatie\\BackupTool\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\BackupTool\\Tests\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -3855,7 +3859,10 @@
                 "laravel",
                 "nova"
             ],
-            "time": "2018-12-29T21:05:05+00:00"
+            "support": {
+                "source": "https://github.com/solarsoft0/nova-backup-tool/tree/master"
+            },
+            "time": "2018-12-31T09:39:47+00:00"
         },
         {
             "name": "spatie/once",
@@ -7063,7 +7070,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel/nova": 20,
+        "spatie/nova-backup-tool": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

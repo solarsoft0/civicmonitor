@@ -8,6 +8,16 @@
     "license": "MIT",
     
     "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/solarsoft0/nova-backup-tool"
+        },
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/solarsoft0/nova"
+        }
+    ],
     "require": {
         "php": "^7.1.3",
         "64robots/nova-fields": "^0.4.3",
@@ -16,7 +26,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/horizon": "^2.0",
-        "laravel/nova": "*",
+        "laravel/nova": "dev-master",
         "laravel/passport": "^7.0",
         "laravel/scout": "^6.0",
         "laravel/tinker": "^1.0",
@@ -25,7 +35,7 @@
         "nsavinov/nova-json-schema-field": "^1.0",
         "silvanite/nova-field-cloudinary": "^1.0",
         "spatie/laravel-backup": "^6.0",
-        "spatie/nova-backup-tool": "^1.1.1"
+        "spatie/nova-backup-tool": "dev-master"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
